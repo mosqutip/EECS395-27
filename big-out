@@ -1,0 +1,382 @@
+[kernel] preprocessing with "gcc -C -E -I.  pdg-ex.c"
+pdg-ex.c:26:[kernel] warning: Calling undeclared function printf. Old style K&R code?
+[value] Analyzing a complete application starting at main
+[value] Computing initial state
+[value] Initial state computed
+[value] Values of globals at initialization
+pdg-ex.c:13:[value] entering loop for the first time
+[value] computing for function scan_unknown_int <- main.
+        Called from pdg-ex.c:13.
+[value] computing for function unknown_int <- scan_unknown_int <- main.
+        Called from pdg-ex.c:6.
+[kernel] warning: Neither code nor specification for function unknown_int, generating default assigns from the prototype
+[value] using specification for function unknown_int
+[value] Done for function unknown_int
+[value] computing for function unknown_int <- scan_unknown_int <- main.
+        Called from pdg-ex.c:7.
+[value] Done for function unknown_int
+[value] Recording results for scan_unknown_int
+[value] Done for function scan_unknown_int
+pdg-ex.c:16:[kernel] warning: signed overflow. assert -2147483648 ≤ n-1;
+pdg-ex.c:16:[value] assigning non deterministic value for the first time
+pdg-ex.c:16:[value] entering loop for the first time
+pdg-ex.c:18:[kernel] warning: signed overflow. assert -2147483648 ≤ m*i ≤ 2147483647;
+pdg-ex.c:19:[value] entering loop for the first time
+[value] computing for function printf <- main.
+        Called from pdg-ex.c:26.
+[kernel] warning: Neither code nor specification for function printf, generating default assigns from the prototype
+[value] using specification for function printf
+[value] Done for function printf
+[value] computing for function scan_unknown_int <- main.
+        Called from pdg-ex.c:13.
+[value] computing for function unknown_int <- scan_unknown_int <- main.
+        Called from pdg-ex.c:6.
+[value] Done for function unknown_int
+[value] computing for function unknown_int <- scan_unknown_int <- main.
+        Called from pdg-ex.c:7.
+[value] Done for function unknown_int
+[value] Recording results for scan_unknown_int
+[value] Done for function scan_unknown_int
+[value] Recording results for main
+[value] done for function main
+[pdg] computing for function printf
+[from] Computing for function printf
+[from] Done for function printf
+[pdg] done for function printf
+[pdg] dot file generated in graph.printf.dot
+[pdg] computing for function unknown_int
+[from] Computing for function unknown_int
+[from] Done for function unknown_int
+[pdg] done for function unknown_int
+[pdg] dot file generated in graph.unknown_int.dot
+[pdg] computing for function scan_unknown_int
+[pdg] done for function scan_unknown_int
+[pdg] dot file generated in graph.scan_unknown_int.dot
+[pdg] computing for function main
+[from] Computing for function scan_unknown_int
+[from] Done for function scan_unknown_int
+[pdg] done for function main
+[pdg] dot file generated in graph.main.dot
+[pdg] ====== PDG GRAPH COMPUTED ======
+[pdg] RESULT for printf:
+      [Elem] 1 : InCtrl
+      [Elem] 2 : VarDecl : x_0
+        -[a--]-> 3
+      [Elem] 3 : In1
+        -[a--]-> 2
+      [Elem] 4 : VarDecl : x_1
+        -[a--]-> 5
+      [Elem] 5 : In2
+        -[a--]-> 4
+      [Elem] 6 : VarDecl : x_2
+        -[a--]-> 7
+      [Elem] 7 : In3
+        -[a--]-> 6
+      [Elem] 8 : OutRet
+        -[--d]-> 5
+        -[--d]-> 7
+        -[--d]-> 9
+      [Elem] 9 : In("%5d -> %d\n"[bits 0 to 7])
+[pdg] RESULT for unknown_int:
+      [Elem] 10 : InCtrl
+      [Elem] 11 : OutRet
+[pdg] RESULT for scan_unknown_int:
+      [Elem] 12 : InCtrl
+      [Elem] 13 : VarDecl : p
+        -[a--]-> 14
+      [Elem] 14 : In1
+        -[a--]-> 13
+      [Elem] 15 : VarDecl : tmp
+      [Elem] 16 : Call1-InCtrl : *p = unknown_int();
+        -[-c-]-> 12
+      [Elem] 17 : Call1-OutRet : *p = unknown_int();
+        -[-c-]-> 12
+        -[a--]-> 13
+        -[a--]-> 14
+        -[-c-]-> 16
+      [Elem] 18 : Call2-InCtrl : tmp = unknown_int();
+        -[-c-]-> 12
+      [Elem] 19 : Call2-OutRet : tmp = unknown_int();
+        -[-c-]-> 12
+        -[a--]-> 15
+        -[-c-]-> 18
+      [Elem] 20 : return tmp;
+        -[-c-]-> 12
+        -[--d]-> 15
+        -[--d]-> 19
+      [Elem] 21 : OutRet
+        -[--d]-> 20
+[pdg] RESULT for main:
+      [Elem] 22 : InCtrl
+      [Elem] 23 : VarDecl : n
+      [Elem] 24 : VarDecl : i
+      [Elem] 25 : VarDecl : m
+      [Elem] 26 : VarDecl : tmp
+      [Elem] 27 : VarDecl : __retres
+      [Elem] 28 : while(1)
+        -[-c-]-> 22
+        -[-c-]-> 28
+        -[-c-]-> 33
+        -[-c-]-> 54
+      [Elem] 29 : Call6-InCtrl : tmp = scan_unknown_int(& n);
+        -[-c-]-> 22
+        -[-c-]-> 28
+        -[-c-]-> 33
+        -[-c-]-> 54
+      [Elem] 30 : Call6-In1 : tmp = scan_unknown_int(& n);
+        -[-c-]-> 22
+        -[--d]-> 23
+        -[-c-]-> 28
+        -[-c-]-> 29
+        -[-c-]-> 33
+        -[-c-]-> 54
+      [Elem] 31 : Call6-Out(n) : tmp = scan_unknown_int(& n);
+        -[-c-]-> 22
+        -[-c-]-> 28
+        -[-c-]-> 29
+        -[--d]-> 30
+        -[-c-]-> 33
+        -[-c-]-> 54
+      [Elem] 32 : Call6-OutRet : tmp = scan_unknown_int(& n);
+        -[-c-]-> 22
+        -[a--]-> 26
+        -[-c-]-> 28
+        -[-c-]-> 29
+        -[-c-]-> 33
+        -[-c-]-> 54
+      [Elem] 33 : tmp != -1
+        -[-c-]-> 22
+        -[--d]-> 26
+        -[-c-]-> 28
+        -[--d]-> 32
+        -[-c-]-> 33
+        -[-c-]-> 54
+      [Elem] 34 : block
+        -[-c-]-> 22
+        -[-c-]-> 28
+        -[-c-]-> 33
+        -[-c-]-> 54
+      [Elem] 35 : m = n;
+        -[-c-]-> 22
+        -[--d]-> 23
+        -[a--]-> 25
+        -[-c-]-> 28
+        -[--d](n)-> 31
+        -[-c-]-> 33
+        -[-c-]-> 34
+        -[-c-]-> 54
+      [Elem] 36 : i = n - 1;
+        -[-c-]-> 22
+        -[--d]-> 23
+        -[a--]-> 24
+        -[-c-]-> 28
+        -[--d](n)-> 31
+        -[-c-]-> 33
+        -[-c-]-> 34
+        -[-c-]-> 54
+      [Elem] 37 : while(1)
+        -[-c-]-> 22
+        -[-c-]-> 28
+        -[-c-]-> 33
+        -[-c-]-> 34
+        -[-c-]-> 37
+        -[-c-]-> 38
+        -[-c-]-> 40
+        -[-c-]-> 54
+      [Elem] 38 : i >= 1
+        -[-c-]-> 22
+        -[--d]-> 24
+        -[-c-]-> 28
+        -[-c-]-> 33
+        -[-c-]-> 34
+        -[--d]-> 36
+        -[-c-]-> 37
+        -[-c-]-> 38
+        -[-c-]-> 40
+        -[--d]-> 53
+        -[-c-]-> 54
+      [Elem] 39 : block
+        -[-c-]-> 22
+        -[-c-]-> 28
+        -[-c-]-> 33
+        -[-c-]-> 34
+        -[-c-]-> 37
+        -[-c-]-> 38
+        -[-c-]-> 40
+        -[-c-]-> 54
+      [Elem] 40 : break;
+        -[-c-]-> 22
+        -[-c-]-> 28
+        -[-c-]-> 33
+        -[-c-]-> 34
+        -[-c-]-> 37
+        -[-c-]-> 38
+        -[-c-]-> 40
+        -[-c-]-> 54
+      [Elem] 41 : m *= i;
+        -[-c-]-> 22
+        -[--d]-> 24
+        -[a-d]-> 25
+        -[-c-]-> 28
+        -[-c-]-> 33
+        -[-c-]-> 34
+        -[--d]-> 35
+        -[--d]-> 36
+        -[-c-]-> 37
+        -[-c-]-> 38
+        -[-c-]-> 39
+        -[-c-]-> 40
+        -[--d]-> 52
+        -[--d]-> 53
+        -[-c-]-> 54
+      [Elem] 42 : m %= 10;
+        -[-c-]-> 22
+        -[a-d]-> 25
+        -[-c-]-> 28
+        -[-c-]-> 33
+        -[-c-]-> 34
+        -[--d]-> 35
+        -[--d]-> 52
+        -[-c-]-> 54
+      [Elem] 43 : while(1)
+        -[-c-]-> 22
+        -[-c-]-> 28
+        -[-c-]-> 33
+        -[-c-]-> 34
+        -[-c-]-> 37
+        -[-c-]-> 38
+        -[-c-]-> 39
+        -[-c-]-> 40
+        -[-c-]-> 43
+        -[-c-]-> 48
+        -[-c-]-> 50
+        -[-c-]-> 54
+      [Elem] 44 : Call27-InCtrl : printf("%5d -> %d\n",n,m);
+        -[-c-]-> 22
+        -[-c-]-> 28
+        -[-c-]-> 33
+        -[-c-]-> 34
+        -[-c-]-> 54
+      [Elem] 45 : Call27-In1 : printf("%5d -> %d\n",n,m);
+        -[-c-]-> 22
+        -[-c-]-> 28
+        -[-c-]-> 33
+        -[-c-]-> 34
+        -[-c-]-> 44
+        -[-c-]-> 54
+      [Elem] 46 : Call27-In2 : printf("%5d -> %d\n",n,m);
+        -[-c-]-> 22
+        -[--d]-> 23
+        -[-c-]-> 28
+        -[--d](n)-> 31
+        -[-c-]-> 33
+        -[-c-]-> 34
+        -[-c-]-> 44
+        -[-c-]-> 54
+      [Elem] 47 : Call27-In3 : printf("%5d -> %d\n",n,m);
+        -[-c-]-> 22
+        -[--d]-> 25
+        -[-c-]-> 28
+        -[-c-]-> 33
+        -[-c-]-> 34
+        -[--d]-> 42
+        -[-c-]-> 44
+        -[-c-]-> 54
+      [Elem] 48 : m % 10 == 0
+        -[-c-]-> 22
+        -[--d]-> 25
+        -[-c-]-> 28
+        -[-c-]-> 33
+        -[-c-]-> 34
+        -[-c-]-> 37
+        -[-c-]-> 38
+        -[-c-]-> 39
+        -[-c-]-> 40
+        -[--d]-> 41
+        -[-c-]-> 43
+        -[-c-]-> 48
+        -[-c-]-> 50
+        -[--d]-> 51
+        -[-c-]-> 54
+      [Elem] 49 : block
+        -[-c-]-> 22
+        -[-c-]-> 28
+        -[-c-]-> 33
+        -[-c-]-> 34
+        -[-c-]-> 37
+        -[-c-]-> 38
+        -[-c-]-> 39
+        -[-c-]-> 40
+        -[-c-]-> 43
+        -[-c-]-> 48
+        -[-c-]-> 50
+        -[-c-]-> 54
+      [Elem] 50 : break;
+        -[-c-]-> 22
+        -[-c-]-> 28
+        -[-c-]-> 33
+        -[-c-]-> 34
+        -[-c-]-> 37
+        -[-c-]-> 38
+        -[-c-]-> 39
+        -[-c-]-> 40
+        -[-c-]-> 43
+        -[-c-]-> 48
+        -[-c-]-> 50
+        -[-c-]-> 54
+      [Elem] 51 : m /= 10;
+        -[-c-]-> 22
+        -[a-d]-> 25
+        -[-c-]-> 28
+        -[-c-]-> 33
+        -[-c-]-> 34
+        -[-c-]-> 37
+        -[-c-]-> 38
+        -[-c-]-> 39
+        -[-c-]-> 40
+        -[--d]-> 41
+        -[-c-]-> 43
+        -[-c-]-> 48
+        -[-c-]-> 49
+        -[-c-]-> 50
+        -[--d]-> 51
+        -[-c-]-> 54
+      [Elem] 52 : m %= 10000;
+        -[-c-]-> 22
+        -[a-d]-> 25
+        -[-c-]-> 28
+        -[-c-]-> 33
+        -[-c-]-> 34
+        -[-c-]-> 37
+        -[-c-]-> 38
+        -[-c-]-> 39
+        -[-c-]-> 40
+        -[--d]-> 41
+        -[--d]-> 51
+        -[-c-]-> 54
+      [Elem] 53 : i --;
+        -[-c-]-> 22
+        -[a-d]-> 24
+        -[-c-]-> 28
+        -[-c-]-> 33
+        -[-c-]-> 34
+        -[--d]-> 36
+        -[-c-]-> 37
+        -[-c-]-> 38
+        -[-c-]-> 40
+        -[--d]-> 53
+        -[-c-]-> 54
+      [Elem] 54 : break;
+        -[-c-]-> 22
+        -[-c-]-> 28
+        -[-c-]-> 33
+        -[-c-]-> 54
+      [Elem] 55 : __retres = 0;
+        -[-c-]-> 22
+        -[a--]-> 27
+      [Elem] 56 : return __retres;
+        -[-c-]-> 22
+        -[--d]-> 27
+        -[--d]-> 55
+      [Elem] 57 : OutRet
+        -[--d]-> 56
