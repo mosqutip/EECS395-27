@@ -1,0 +1,149 @@
+[kernel] preprocessing with "gcc -C -E -I.  lynx-ex.c"
+/usr/include/bits/byteswap.h:47:[kernel] warning: Calling undeclared function __builtin_bswap32. Old style K&R code?
+/usr/include/bits/byteswap.h:111:[kernel] warning: Calling undeclared function __builtin_bswap64. Old style K&R code?
+[value] Analyzing a complete application starting at main
+[value] Computing initial state
+[value] Initial state computed
+[value] Values of globals at initialization
+[value] computing for function malloc <- main.
+        Called from lynx-ex.c:43.
+[kernel] warning: Neither code nor specification for function malloc, generating default assigns from the prototype
+[value] using specification for function malloc
+[value] Done for function malloc
+lynx-ex.c:45:[kernel] warning: out of bounds read. assert \valid_read(&handle->gnutls_state);
+lynx-ex.c:45:[value] Reading left-value handle->gnutls_state.
+        The location is {{ NULL -> [--..--],0%8;
+                           alloced_return_malloc -> [96..17179869272],0%8 }}.
+        It contains a garbled mix of {alloced_return_malloc} because of
+        Library function {lynx-ex.c:43}.
+[value] computing for function gnutls_certificate_verify_peers2 <- main.
+        Called from lynx-ex.c:45.
+lynx-ex.c:23:[kernel] warning: accessing uninitialized left-value: assert \initialized(i);
+lynx-ex.c:23:[kernel] warning: completely indeterminate value in tls_status.
+[value] Recording results for gnutls_certificate_verify_peers2
+[value] Done for function gnutls_certificate_verify_peers2
+[value] Recording results for main
+[value] done for function main
+[pdg] computing for function gnutls_certificate_verify_peers2
+lynx-ex.c:23:[pdg] warning: no final state. Probably unreachable...
+[pdg] done for function gnutls_certificate_verify_peers2
+[pdg] computing for function malloc
+[from] Computing for function malloc
+[from] Done for function malloc
+[pdg] done for function malloc
+[pdg] computing for function main
+[from] Computing for function gnutls_certificate_verify_peers2
+[from] Non-terminating function gnutls_certificate_verify_peers2 (no dependencies)
+[from] Done for function gnutls_certificate_verify_peers2
+lynx-ex.c:63:[pdg] warning: no final state. Probably unreachable...
+[pdg] done for function main
+[pdg] ====== PDG GRAPH COMPUTED ======
+[pdg] RESULT for gnutls_certificate_verify_peers2:
+      [Elem] 1 : InCtrl
+      [Elem] 2 : VarDecl : s
+        -[a--]-> 3
+      [Elem] 3 : In1
+        -[a--]-> 2
+      [Elem] 4 : VarDecl : i
+        -[a--]-> 5
+      [Elem] 5 : In2
+        -[a--]-> 4
+      [Elem] 6 : VarDecl : __retres
+      [Elem] 7 : *i == 3
+        -[-c-]-> 1
+        -[--d]-> 4
+        -[--d]-> 5
+        -[--d]-> 13
+      [Elem] 8 : goto return_label;
+        -[-c-]-> 1
+        -[-c-]-> 9
+      [Elem] 9 : return_label: /* internal */
+        -[-c-]-> 1
+      [Elem] 10 : goto return_label;
+        -[-c-]-> 1
+        -[-c-]-> 9
+      [Elem] 11 : return_label: /* internal */ return __retres;
+        -[-c-]-> 1
+        -[--d]-> 6
+      [Elem] 12 : OutRet
+      [Elem] 13 : In(tls_status)
+[pdg] RESULT for malloc:
+      [Elem] 14 : InCtrl
+      [Elem] 15 : VarDecl : __size
+        -[a--]-> 16
+      [Elem] 16 : In1
+        -[a--]-> 15
+      [Elem] 17 : OutRet
+        -[--d]-> 16
+[pdg] RESULT for main:
+      [Elem] 18 : InCtrl
+      [Elem] 19 : VarDecl : argc
+        -[a--]-> 20
+      [Elem] 20 : In1
+        -[a--]-> 19
+      [Elem] 21 : VarDecl : argv
+        -[a--]-> 22
+      [Elem] 22 : In2
+        -[a--]-> 21
+      [Elem] 23 : VarDecl : ret
+      [Elem] 24 : VarDecl : tls_status
+      [Elem] 25 : VarDecl : handle
+      [Elem] 26 : VarDecl : flag_continue
+      [Elem] 27 : VarDecl : msg2
+      [Elem] 28 : VarDecl : __retres
+      [Elem] 29 : Call20-InCtrl : handle = (state_t *)malloc((unsigned long)sizeof(state_t));
+        -[-c-]-> 18
+      [Elem] 30 : Call20-In1 : handle = (state_t *)malloc((unsigned long)sizeof(state_t));
+        -[-c-]-> 18
+        -[-c-]-> 29
+      [Elem] 31 : Call20-OutRet : handle = (state_t *)malloc((unsigned long)sizeof(state_t));
+        -[-c-]-> 18
+        -[a--]-> 25
+        -[-c-]-> 29
+        -[--d]-> 30
+      [Elem] 32 : Call21-InCtrl : ret = gnutls_certificate_verify_peers2(handle->gnutls_state,& tls_status);
+        -[-c-]-> 18
+      [Elem] 33 : Call21-In1 : ret = gnutls_certificate_verify_peers2(handle->gnutls_state,& tls_status);
+        -[-c-]-> 18
+        -[--d]-> 25
+        -[--d]-> 31
+        -[-c-]-> 32
+        -[--d]-> 46
+      [Elem] 34 : Call21-In2 : ret = gnutls_certificate_verify_peers2(handle->gnutls_state,& tls_status);
+        -[-c-]-> 18
+        -[--d]-> 24
+        -[-c-]-> 32
+      [Elem] 35 : ret < 0
+        -[-c-]-> 18
+        -[--d]-> 23
+      [Elem] 36 : goto _LOR;
+        -[-c-]-> 18
+        -[-c-]-> 37
+      [Elem] 37 : _LOR: /* internal */
+        -[-c-]-> 18
+      [Elem] 38 : tls_status
+        -[-c-]-> 18
+        -[--d]-> 24
+      [Elem] 39 : block
+        -[-c-]-> 18
+      [Elem] 40 : tls_status & 0x003
+        -[-c-]-> 18
+        -[--d]-> 24
+        -[-c-]-> 39
+      [Elem] 41 : tls_status & 0x004
+        -[-c-]-> 18
+        -[--d]-> 24
+        -[-c-]-> 39
+      [Elem] 42 : tls_status & 0x003
+        -[-c-]-> 18
+        -[--d]-> 24
+        -[-c-]-> 39
+      [Elem] 43 : (unsigned int)tls_status & 0xFFFFFFFFU
+        -[-c-]-> 18
+        -[--d]-> 24
+        -[-c-]-> 39
+      [Elem] 44 : return __retres;
+        -[-c-]-> 18
+        -[--d]-> 28
+      [Elem] 45 : OutRet
+      [Elem] 46 : In(alloced_return_malloc[bits 96 to 17179869303])
