@@ -4,6 +4,7 @@ import hashlib
 
 if (len(sys.argv) != 3):
     print("Wrong number of arguments. Please provide two input PDG files.")
+    print("Usage: ./comparator.py <pdg_output_1> <pdg_output_2>")
     sys.exit(0)
 
 nodes1 = []
