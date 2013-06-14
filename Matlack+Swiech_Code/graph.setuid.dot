@@ -1,0 +1,31 @@
+digraph G {
+  rankdir=TB;
+  node [style=filled];
+  17 [shape=box, fillcolor="#FFEFD5", label="Decl thing"];
+  18 [shape=box, fillcolor="#6495ED", label="In1"];
+  19 [shape=box, fillcolor="#FFEFD5", label="Decl __retres"];
+  20 [shape=diamond, fillcolor="#CCCCCC", label="thing == 2"];
+  21 [shape=box, fillcolor="#CCCCCC", label="__retres = thing - 1;"];
+  22 [shape=doublecircle, fillcolor="#CCCCCC", label="goto return_label;"];
+  23 [shape=box, fillcolor="#CCCCCC", label="return_label: /* internal */"];
+  24 [shape=doublecircle, fillcolor="#CCCCCC", label="goto return_label;"];
+  25 [shape=box, fillcolor="#CCCCCC",
+      label="return_label: /* internal */ return __retres;"];
+  26 [shape=box, fillcolor="#90EE90", label="OutRet"];
+  
+  
+  edge [dir=back];
+  18 -> 17 [style=dotted, color="#000000"];
+  17 -> 18 [style=dotted, color="#000000"];
+  17 -> 20 [color="#0000FF"];
+  18 -> 20 [color="#0000FF"];
+  17 -> 21 [color="#0000FF"];
+  18 -> 21 [color="#0000FF"];
+  19 -> 21 [style=dotted, color="#000000"];
+  23 -> 22 [arrowtail=odot, color="#000000"];
+  23 -> 24 [arrowtail=odot, color="#000000"];
+  19 -> 25 [color="#0000FF"];
+  21 -> 25 [color="#0000FF"];
+  25 -> 26 [color="#0000FF"];
+  
+  }

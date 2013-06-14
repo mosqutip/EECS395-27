@@ -1,0 +1,31 @@
+digraph G {
+  rankdir=TB;
+  node [style=filled];
+  13 [shape=box, fillcolor="#FFEFD5", label="Decl p"];
+  14 [shape=box, fillcolor="#6495ED", label="In1"];
+  15 [shape=box, fillcolor="#FFEFD5", label="Decl tmp"];
+  17 [shape=box, fillcolor="#FFCA6E", label="OutRet"];
+  19 [shape=box, fillcolor="#FFCA6E", label="OutRet"];
+  20 [shape=box, fillcolor="#CCCCCC", label="return tmp;"];
+  21 [shape=box, fillcolor="#90EE90", label="OutRet"];
+  
+  subgraph cluster_Call2 { style=filled;
+    fillcolor="#B38B4D";
+    label="Call2 : tmp = unknown_int();";
+    19; };
+  subgraph cluster_Call1 { style=filled;
+    fillcolor="#B38B4D";
+    label="Call1 : *p = unknown_int();";
+    17; };
+  
+  edge [dir=back];
+  14 -> 13 [style=dotted, color="#000000"];
+  13 -> 14 [style=dotted, color="#000000"];
+  13 -> 17 [style=dotted, color="#000000"];
+  14 -> 17 [style=dotted, color="#000000"];
+  15 -> 19 [style=dotted, color="#000000"];
+  15 -> 20 [color="#0000FF"];
+  19 -> 20 [color="#0000FF"];
+  20 -> 21 [color="#0000FF"];
+  
+  }

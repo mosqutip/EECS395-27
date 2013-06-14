@@ -1,0 +1,84 @@
+[kernel] preprocessing with "gcc -C -E -I.  data-ctrl.c"
+/usr/include/bits/byteswap.h:47:[kernel] warning: Calling undeclared function __builtin_bswap32. Old style K&R code?
+/usr/include/bits/byteswap.h:111:[kernel] warning: Calling undeclared function __builtin_bswap64. Old style K&R code?
+[value] Analyzing a complete application starting at main
+[value] Computing initial state
+[value] Initial state computed
+[value] Values of globals at initialization
+data-ctrl.c:6:[kernel] warning: out of bounds read. assert \valid_read(argv+1);
+[value] computing for function atoi <- main.
+        Called from data-ctrl.c:6.
+[kernel] warning: Neither code nor specification for function atoi, generating default assigns from the prototype
+[value] using specification for function atoi
+[value] Done for function atoi
+data-ctrl.c:7:[kernel] warning: out of bounds read. assert \valid_read(argv+2);
+data-ctrl.c:7:[value] completely invalid value in evaluation of
+        argument *(argv + 2)
+[value] Recording results for main
+[value] done for function main
+[pdg] computing for function atoi
+[from] Computing for function atoi
+[from] Done for function atoi
+[pdg] done for function atoi
+[pdg] dot file generated in graph.atoi.dot
+[pdg] computing for function main
+data-ctrl.c:16:[pdg] warning: no final state. Probably unreachable...
+[pdg] done for function main
+[pdg] dot file generated in graph.main.dot
+[pdg] ====== PDG GRAPH COMPUTED ======
+[pdg] RESULT for atoi:
+      [Elem] 1 : InCtrl
+      [Elem] 2 : VarDecl : __nptr
+        -[a--]-> 3
+      [Elem] 3 : In1
+        -[a--]-> 2
+      [Elem] 4 : OutRet
+        -[--d]-> 5
+      [Elem] 5 : In(S_1_S_argv[0])
+[pdg] RESULT for main:
+      [Elem] 6 : InCtrl
+      [Elem] 7 : VarDecl : argc
+        -[a--]-> 8
+      [Elem] 8 : In1
+        -[a--]-> 7
+      [Elem] 9 : VarDecl : argv
+        -[a--]-> 10
+      [Elem] 10 : In2
+        -[a--]-> 9
+      [Elem] 11 : VarDecl : x
+      [Elem] 12 : VarDecl : y
+      [Elem] 13 : VarDecl : z
+      [Elem] 14 : Call7-InCtrl : x = atoi(*(argv + 1));
+        -[-c-]-> 6
+      [Elem] 15 : Call7-In1 : x = atoi(*(argv + 1));
+        -[-c-]-> 6
+        -[--d]-> 9
+        -[--d]-> 10
+        -[-c-]-> 14
+        -[--d]-> 24
+      [Elem] 16 : Call7-OutRet : x = atoi(*(argv + 1));
+        -[-c-]-> 6
+        -[a--]-> 11
+        -[-c-]-> 14
+        -[--d]-> 23
+      [Elem] 17 : Call8-InCtrl : y = atoi(*(argv + 2));
+        -[-c-]-> 6
+      [Elem] 18 : Call8-In1 : y = atoi(*(argv + 2));
+        -[-c-]-> 6
+        -[--d]-> 9
+        -[--d]-> 10
+        -[-c-]-> 17
+      [Elem] 19 : Call8-OutRet : y = atoi(*(argv + 2));
+        -[-c-]-> 6
+        -[a--]-> 12
+        -[-c-]-> 17
+        -[--d]-> 23
+      [Elem] 20 : x == 0
+        -[-c-]-> 6
+        -[--d]-> 11
+      [Elem] 21 : return z;
+        -[-c-]-> 6
+        -[--d]-> 13
+      [Elem] 22 : OutRet
+      [Elem] 23 : In(S_1_S_argv[0])
+      [Elem] 24 : In(S_argv[1])
