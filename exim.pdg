@@ -1,0 +1,267 @@
+[kernel] preprocessing with "gcc -C -E -I.  exim-ex.c"
+/usr/include/bits/byteswap.h:47:[kernel] warning: Calling undeclared function __builtin_bswap32. Old style K&R code?
+/usr/include/bits/byteswap.h:111:[kernel] warning: Calling undeclared function __builtin_bswap64. Old style K&R code?
+[value] Analyzing a complete application starting at main
+[value] Computing initial state
+[value] Initial state computed
+[value] Values of globals at initialization
+[value] computing for function malloc <- main.
+        Called from exim-ex.c:34.
+[kernel] warning: Neither code nor specification for function malloc, generating default assigns from the prototype
+[value] using specification for function malloc
+[value] Done for function malloc
+exim-ex.c:35:[kernel] warning: out of bounds read. assert \valid_read(argv+1);
+[value] computing for function atoi <- main.
+        Called from exim-ex.c:35.
+[kernel] warning: Neither code nor specification for function atoi, generating default assigns from the prototype
+[value] using specification for function atoi
+[value] Done for function atoi
+exim-ex.c:39:[kernel] warning: out of bounds read. assert \valid_read(&state->session);
+exim-ex.c:39:[value] Reading left-value state->session.
+        The location is {{ NULL -> [--..--],0%8;
+                           alloced_return_malloc -> [0..17179869176],0%8 }}.
+        It contains a garbled mix of {alloced_return_malloc} because of
+        Library function {exim-ex.c:34}.
+[value] computing for function gnutls_certificate_verify_peers2 <- main.
+        Called from exim-ex.c:39.
+exim-ex.c:23:[kernel] warning: signed overflow. assert -2147483648 ≤ *i-1;
+exim-ex.c:23:[value] assigning non deterministic value for the first time
+[value] Recording results for gnutls_certificate_verify_peers2
+[value] Done for function gnutls_certificate_verify_peers2
+exim-ex.c:68:[kernel] warning: out of bounds write. assert \valid(&state->peer_cert_verified);
+exim-ex.c:46:[kernel] warning: out of bounds write. assert \valid(&state->peer_cert_verified);
+exim-ex.c:47:[kernel] warning: out of bounds read. assert \valid_read(error);
+[value] Recording results for main
+[value] done for function main
+[pdg] computing for function atoi
+[from] Computing for function atoi
+[from] Done for function atoi
+[pdg] done for function atoi
+[pdg] computing for function gnutls_certificate_verify_peers2
+[pdg] done for function gnutls_certificate_verify_peers2
+[pdg] computing for function malloc
+[from] Computing for function malloc
+[from] Done for function malloc
+[pdg] done for function malloc
+[pdg] computing for function main
+[from] Computing for function gnutls_certificate_verify_peers2
+[from] Done for function gnutls_certificate_verify_peers2
+[pdg] done for function main
+[pdg] ====== PDG GRAPH COMPUTED ======
+[pdg] RESULT for atoi:
+      [Elem] 1 : InCtrl
+      [Elem] 2 : VarDecl : __nptr
+        -[a--]-> 3
+      [Elem] 3 : In1
+        -[a--]-> 2
+      [Elem] 4 : OutRet
+        -[--d]-> 5
+      [Elem] 5 : In(S_1_S_argv[0])
+[pdg] RESULT for gnutls_certificate_verify_peers2:
+      [Elem] 6 : InCtrl
+      [Elem] 7 : VarDecl : s
+        -[a--]-> 8
+      [Elem] 8 : In1
+        -[a--]-> 7
+      [Elem] 9 : VarDecl : i
+        -[a--]-> 10
+      [Elem] 10 : In2
+        -[a--]-> 9
+      [Elem] 11 : VarDecl : __retres
+      [Elem] 12 : *i == 3
+        -[-c-]-> 6
+        -[--d]-> 9
+        -[--d]-> 10
+        -[--d]-> 21
+      [Elem] 13 : __retres = -1;
+        -[-c-]-> 6
+        -[a--]-> 11
+        -[-c-]-> 12
+      [Elem] 14 : (*i) --;
+        -[-c-]-> 6
+        -[a-d]-> 9
+        -[a-d]-> 10
+        -[-c-]-> 12
+        -[--d]-> 21
+      [Elem] 15 : goto return_label;
+        -[-c-]-> 6
+        -[-c-]-> 12
+        -[-c-]-> 16
+      [Elem] 16 : return_label: /* internal */
+        -[-c-]-> 6
+      [Elem] 17 : __retres = *i;
+        -[-c-]-> 6
+        -[--d]-> 9
+        -[--d]-> 10
+        -[a--]-> 11
+        -[-c-]-> 12
+        -[--d]-> 14
+      [Elem] 18 : goto return_label;
+        -[-c-]-> 6
+        -[-c-]-> 12
+        -[-c-]-> 16
+      [Elem] 19 : return_label: /* internal */ return __retres;
+        -[-c-]-> 6
+        -[--d]-> 11
+        -[--d]-> 13
+        -[--d]-> 17
+      [Elem] 20 : OutRet
+        -[--d]-> 19
+      [Elem] 21 : In(verify)
+[pdg] RESULT for malloc:
+      [Elem] 22 : InCtrl
+      [Elem] 23 : VarDecl : __size
+        -[a--]-> 24
+      [Elem] 24 : In1
+        -[a--]-> 23
+      [Elem] 25 : OutRet
+        -[--d]-> 24
+[pdg] RESULT for main:
+      [Elem] 26 : InCtrl
+      [Elem] 27 : VarDecl : argc
+        -[a--]-> 28
+      [Elem] 28 : In1
+        -[a--]-> 27
+      [Elem] 29 : VarDecl : argv
+        -[a--]-> 30
+      [Elem] 30 : In2
+        -[a--]-> 29
+      [Elem] 31 : VarDecl : rc
+      [Elem] 32 : VarDecl : state
+      [Elem] 33 : VarDecl : verify
+      [Elem] 34 : VarDecl : error
+      [Elem] 35 : VarDecl : __retres
+      [Elem] 36 : Call17-InCtrl : state = (state_t *)malloc((unsigned long)sizeof(state_t));
+        -[-c-]-> 26
+      [Elem] 37 : Call17-In1 : state = (state_t *)malloc((unsigned long)sizeof(state_t));
+        -[-c-]-> 26
+        -[-c-]-> 36
+      [Elem] 38 : Call17-OutRet : state = (state_t *)malloc((unsigned long)sizeof(state_t));
+        -[-c-]-> 26
+        -[a--]-> 32
+        -[-c-]-> 36
+        -[--d]-> 37
+      [Elem] 39 : Call18-InCtrl : verify = atoi((char const *)*(argv + 1));
+        -[-c-]-> 26
+      [Elem] 40 : Call18-In1 : verify = atoi((char const *)*(argv + 1));
+        -[-c-]-> 26
+        -[--d]-> 29
+        -[--d]-> 30
+        -[-c-]-> 39
+        -[--d]-> 65
+      [Elem] 41 : Call18-OutRet : verify = atoi((char const *)*(argv + 1));
+        -[-c-]-> 26
+        -[a--]-> 33
+        -[-c-]-> 39
+        -[--d]-> 64
+      [Elem] 42 : error = (char *)((void *)0);
+        -[-c-]-> 26
+        -[a--]-> 34
+      [Elem] 43 : Call20-InCtrl : rc = gnutls_certificate_verify_peers2(state->session,& verify);
+        -[-c-]-> 26
+      [Elem] 44 : Call20-In1 : rc = gnutls_certificate_verify_peers2(state->session,& verify);
+        -[-c-]-> 26
+        -[--d]-> 32
+        -[--d]-> 38
+        -[-c-]-> 43
+        -[--d]-> 63
+      [Elem] 45 : Call20-In2 : rc = gnutls_certificate_verify_peers2(state->session,& verify);
+        -[-c-]-> 26
+        -[--d]-> 33
+        -[-c-]-> 43
+      [Elem] 46 : Call20-Out(verify) : rc = gnutls_certificate_verify_peers2(state->session,& verify);
+        -[-c-]-> 26
+        -[--d]-> 41
+        -[-c-]-> 43
+        -[--d]-> 45
+      [Elem] 47 : Call20-OutRet : rc = gnutls_certificate_verify_peers2(state->session,& verify);
+        -[-c-]-> 26
+        -[a--]-> 31
+        -[--d]-> 41
+        -[-c-]-> 43
+        -[--d]-> 45
+      [Elem] 48 : rc < 0
+        -[-c-]-> 26
+        -[--d]-> 31
+        -[--d]-> 47
+      [Elem] 49 : goto _LOR;
+        -[-c-]-> 26
+        -[-c-]-> 48
+        -[-c-]-> 50
+      [Elem] 50 : _LOR: /* internal */
+        -[-c-]-> 26
+        -[-c-]-> 48
+        -[-c-]-> 49
+        -[-c-]-> 51
+      [Elem] 51 : ((unsigned int)verify & ((unsigned int)0xa | 0xFFFFFFFFU)) != (unsigned int)0
+        -[-c-]-> 26
+        -[--d]-> 33
+        -[--d]-> 41
+        -[--d](verify)-> 46
+        -[-c-]-> 48
+      [Elem] 52 : block
+        -[-c-]-> 26
+        -[-c-]-> 48
+        -[-c-]-> 49
+        -[-c-]-> 51
+      [Elem] 53 : state->peer_cert_verified = 1;
+        -[-c-]-> 26
+        -[a--]-> 32
+        -[a--]-> 38
+        -[-c-]-> 48
+        -[-c-]-> 51
+      [Elem] 54 : state->peer_cert_verified = 0;
+        -[-c-]-> 26
+        -[a--]-> 32
+        -[a--]-> 38
+        -[-c-]-> 48
+        -[-c-]-> 49
+        -[-c-]-> 51
+        -[-c-]-> 52
+      [Elem] 55 : (unsigned int)*error == (unsigned int)((void *)0)
+        -[-c-]-> 26
+        -[--d]-> 34
+        -[--d]-> 42
+        -[-c-]-> 48
+        -[-c-]-> 49
+        -[-c-]-> 51
+        -[-c-]-> 52
+      [Elem] 56 : ((unsigned int)verify & 0xFFFFFFFFU) != (unsigned int)0
+        -[-c-]-> 26
+        -[--d]-> 33
+        -[-c-]-> 48
+        -[-c-]-> 49
+        -[-c-]-> 51
+        -[-c-]-> 52
+      [Elem] 57 : state->verify_requirement == 0x555
+        -[-c-]-> 26
+        -[--d]-> 32
+        -[-c-]-> 48
+        -[-c-]-> 49
+        -[-c-]-> 51
+        -[-c-]-> 52
+      [Elem] 58 : __retres = 0;
+        -[-c-]-> 26
+        -[a--]-> 35
+        -[-c-]-> 48
+        -[-c-]-> 49
+        -[-c-]-> 51
+        -[-c-]-> 52
+      [Elem] 59 : goto return_label;
+        -[-c-]-> 26
+        -[-c-]-> 48
+        -[-c-]-> 49
+        -[-c-]-> 51
+        -[-c-]-> 52
+        -[-c-]-> 60
+      [Elem] 60 : return_label: /* internal */
+        -[-c-]-> 26
+      [Elem] 61 : return_label: /* internal */ return __retres;
+        -[-c-]-> 26
+        -[--d]-> 35
+        -[--d]-> 58
+      [Elem] 62 : OutRet
+        -[--d]-> 61
+      [Elem] 63 : In(alloced_return_malloc[bits 0 to 17179869207])
+      [Elem] 64 : In(S_1_S_argv[0])
+      [Elem] 65 : In(S_argv[1])
