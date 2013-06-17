@@ -1,0 +1,1369 @@
+[kernel] preprocessing with "gcc -C -E -I.  rage.c"
+/usr/include/bits/byteswap.h:47:[kernel] warning: Calling undeclared function __builtin_bswap32. Old style K&R code?
+/usr/include/bits/byteswap.h:111:[kernel] warning: Calling undeclared function __builtin_bswap64. Old style K&R code?
+rage.c:46:[kernel] warning: Calling undeclared function adb_main. Old style K&R code?
+rage.c:66:[kernel] warning: Calling undeclared function init_transport_registration. Old style K&R code?
+rage.c:84:[kernel] warning: Calling undeclared function property_get. Old style K&R code?
+rage.c:109:[kernel] warning: Calling undeclared function prctl. Old style K&R code?
+rage.c:125:[kernel] warning: Calling undeclared function setgroups. Old style K&R code?
+rage.c:130:[kernel] warning: Calling undeclared function setgid. Old style K&R code?
+rage.c:133:[kernel] warning: Calling undeclared function setuid. Old style K&R code?
+rage.c:142:[kernel] warning: Calling undeclared function capset. Old style K&R code?
+rage.c:144:[kernel] warning: Calling undeclared function D. Old style K&R code?
+rage.c:147:[kernel] warning: Calling undeclared function build_local_name. Old style K&R code?
+rage.c:148:[kernel] warning: Calling undeclared function install_listener. Old style K&R code?
+rage.c:163:[kernel] warning: Calling undeclared function local_init. Old style K&R code?
+rage.c:166:[kernel] warning: Calling undeclared function usb_init. Old style K&R code?
+rage.c:164:[kernel] warning: Calling undeclared function access. Old style K&R code?
+rage.c:171:[kernel] warning: Calling undeclared function init_jdwp. Old style K&R code?
+rage.c:183:[kernel] warning: Calling undeclared function start_logging. Old style K&R code?
+rage.c:186:[kernel] warning: Calling undeclared function fdevent_loop. Old style K&R code?
+rage.c:188:[kernel] warning: Calling undeclared function usb_cleanup. Old style K&R code?
+[value] Analyzing a complete application starting at main
+[value] Computing initial state
+[value] Initial state computed
+[value] Values of globals at initialization
+[value] computing for function adb_main <- main.
+        Called from rage.c:46.
+[value] computing for function atexit <- adb_main <- main.
+        Called from rage.c:58.
+[kernel] warning: Neither code nor specification for function atexit, generating default assigns from the prototype
+[value] using specification for function atexit
+rage.c:58:[value] warning: Completely invalid destination for assigns clause *__func. Ignoring.
+[value] Done for function atexit
+[value] computing for function init_transport_registration <- adb_main <- main.
+        Called from rage.c:66.
+[kernel] warning: Neither code nor specification for function init_transport_registration, generating default assigns from the prototype
+[value] using specification for function init_transport_registration
+[value] Done for function init_transport_registration
+[value] computing for function property_get <- adb_main <- main.
+        Called from rage.c:84.
+[kernel] warning: Neither code nor specification for function property_get, generating default assigns from the prototype
+[value] using specification for function property_get
+[value] Done for function property_get
+[value] computing for function strcmp <- adb_main <- main.
+        Called from rage.c:85.
+[kernel] warning: Neither code nor specification for function strcmp, generating default assigns from the prototype
+[value] using specification for function strcmp
+[value] Done for function strcmp
+[value] computing for function property_get <- adb_main <- main.
+        Called from rage.c:86.
+[value] Done for function property_get
+[value] computing for function strcmp <- adb_main <- main.
+        Called from rage.c:87.
+[value] Done for function strcmp
+[value] computing for function property_get <- adb_main <- main.
+        Called from rage.c:93.
+[value] Done for function property_get
+[value] computing for function strcmp <- adb_main <- main.
+        Called from rage.c:94.
+[value] Done for function strcmp
+[value] computing for function property_get <- adb_main <- main.
+        Called from rage.c:95.
+[value] Done for function property_get
+[value] computing for function strcmp <- adb_main <- main.
+        Called from rage.c:96.
+[value] Done for function strcmp
+[value] computing for function prctl <- adb_main <- main.
+        Called from rage.c:109.
+[kernel] warning: Neither code nor specification for function prctl, generating default assigns from the prototype
+[value] using specification for function prctl
+[value] Done for function prctl
+[value] computing for function build_local_name <- adb_main <- main.
+        Called from rage.c:147.
+[kernel] warning: Neither code nor specification for function build_local_name, generating default assigns from the prototype
+[value] using specification for function build_local_name
+[value] Done for function build_local_name
+[value] computing for function install_listener <- adb_main <- main.
+        Called from rage.c:148.
+[kernel] warning: Neither code nor specification for function install_listener, generating default assigns from the prototype
+[value] using specification for function install_listener
+[value] Done for function install_listener
+[value] computing for function exit <- adb_main <- main.
+        Called from rage.c:110.
+[kernel] warning: Neither code nor specification for function exit, generating default assigns from the prototype
+[value] using specification for function exit
+[value] Done for function exit
+[value] computing for function exit <- adb_main <- main.
+        Called from rage.c:149.
+[value] Done for function exit
+[value] computing for function setgroups <- adb_main <- main.
+        Called from rage.c:125.
+[kernel] warning: Neither code nor specification for function setgroups, generating default assigns from the prototype
+[value] using specification for function setgroups
+[value] Done for function setgroups
+[value] computing for function exit <- adb_main <- main.
+        Called from rage.c:126.
+[value] Done for function exit
+[value] computing for function setgid <- adb_main <- main.
+        Called from rage.c:130.
+[kernel] warning: Neither code nor specification for function setgid, generating default assigns from the prototype
+[value] using specification for function setgid
+[value] Done for function setgid
+[value] computing for function exit <- adb_main <- main.
+        Called from rage.c:131.
+[value] Done for function exit
+[value] computing for function setuid <- adb_main <- main.
+        Called from rage.c:133.
+[kernel] warning: Neither code nor specification for function setuid, generating default assigns from the prototype
+[value] using specification for function setuid
+[value] Done for function setuid
+[value] computing for function exit <- adb_main <- main.
+        Called from rage.c:134.
+[value] Done for function exit
+[value] computing for function capset <- adb_main <- main.
+        Called from rage.c:142.
+[kernel] warning: Neither code nor specification for function capset, generating default assigns from the prototype
+[value] using specification for function capset
+[value] Done for function capset
+[value] computing for function D <- adb_main <- main.
+        Called from rage.c:144.
+[kernel] warning: Neither code nor specification for function D, generating default assigns from the prototype
+[value] using specification for function D
+[value] Done for function D
+[value] computing for function property_get <- adb_main <- main.
+        Called from rage.c:158.
+[value] Done for function property_get
+rage.c:159:[kernel] warning: accessing uninitialized left-value: assert \initialized((char *)value);
+[value] computing for function property_get <- adb_main <- main.
+        Called from rage.c:160.
+[value] Done for function property_get
+[value] computing for function sscanf <- adb_main <- main.
+        Called from rage.c:161.
+[kernel] warning: Neither code nor specification for function sscanf, generating default assigns from the prototype
+[value] using specification for function sscanf
+[value] Done for function sscanf
+rage.c:161:[kernel] warning: accessing uninitialized left-value: assert \initialized(&port);
+rage.c:161:[kernel] warning: completely indeterminate value in port.
+[value] computing for function access <- adb_main <- main.
+        Called from rage.c:164.
+[kernel] warning: Neither code nor specification for function access, generating default assigns from the prototype
+[value] using specification for function access
+[value] Done for function access
+[value] computing for function usb_init <- adb_main <- main.
+        Called from rage.c:166.
+[kernel] warning: Neither code nor specification for function usb_init, generating default assigns from the prototype
+[value] using specification for function usb_init
+[value] Done for function usb_init
+[value] computing for function local_init <- adb_main <- main.
+        Called from rage.c:169.
+[kernel] warning: Neither code nor specification for function local_init, generating default assigns from the prototype
+[value] using specification for function local_init
+[value] Done for function local_init
+[value] computing for function init_jdwp <- adb_main <- main.
+        Called from rage.c:171.
+[kernel] warning: Neither code nor specification for function init_jdwp, generating default assigns from the prototype
+[value] using specification for function init_jdwp
+[value] Done for function init_jdwp
+[value] computing for function start_logging <- adb_main <- main.
+        Called from rage.c:183.
+[kernel] warning: Neither code nor specification for function start_logging, generating default assigns from the prototype
+[value] using specification for function start_logging
+[value] Done for function start_logging
+[value] computing for function fdevent_loop <- adb_main <- main.
+        Called from rage.c:186.
+[kernel] warning: Neither code nor specification for function fdevent_loop, generating default assigns from the prototype
+[value] using specification for function fdevent_loop
+[value] Done for function fdevent_loop
+[value] computing for function usb_cleanup <- adb_main <- main.
+        Called from rage.c:188.
+[kernel] warning: Neither code nor specification for function usb_cleanup, generating default assigns from the prototype
+[value] using specification for function usb_cleanup
+[value] Done for function usb_cleanup
+[value] Recording results for adb_main
+[value] Done for function adb_main
+[value] Recording results for main
+[value] done for function main
+[pdg] computing for function D
+[from] Computing for function D
+[from] Done for function D
+[pdg] done for function D
+[pdg] computing for function access
+[from] Computing for function access
+[from] Done for function access
+[pdg] done for function access
+[pdg] computing for function atexit
+[from] Computing for function atexit
+[from] Done for function atexit
+[pdg] done for function atexit
+[pdg] computing for function build_local_name
+[from] Computing for function build_local_name
+[from] Done for function build_local_name
+[pdg] done for function build_local_name
+[pdg] computing for function capset
+[from] Computing for function capset
+[from] Done for function capset
+[pdg] done for function capset
+[pdg] computing for function exit
+[from] Computing for function exit
+[from] Done for function exit
+[pdg] done for function exit
+[pdg] computing for function fdevent_loop
+[from] Computing for function fdevent_loop
+[from] Done for function fdevent_loop
+[pdg] done for function fdevent_loop
+[pdg] computing for function init_jdwp
+[from] Computing for function init_jdwp
+[from] Done for function init_jdwp
+[pdg] done for function init_jdwp
+[pdg] computing for function init_transport_registration
+[from] Computing for function init_transport_registration
+[from] Done for function init_transport_registration
+[pdg] done for function init_transport_registration
+[pdg] computing for function install_listener
+[from] Computing for function install_listener
+[from] Done for function install_listener
+[pdg] done for function install_listener
+[pdg] computing for function local_init
+[from] Computing for function local_init
+[from] Done for function local_init
+[pdg] done for function local_init
+[pdg] computing for function prctl
+[from] Computing for function prctl
+[from] Done for function prctl
+[pdg] done for function prctl
+[pdg] computing for function property_get
+[from] Computing for function property_get
+[from] Done for function property_get
+[pdg] done for function property_get
+[pdg] computing for function setgid
+[from] Computing for function setgid
+[from] Done for function setgid
+[pdg] done for function setgid
+[pdg] computing for function setgroups
+[from] Computing for function setgroups
+[from] Done for function setgroups
+[pdg] done for function setgroups
+[pdg] computing for function setuid
+[from] Computing for function setuid
+[from] Done for function setuid
+[pdg] done for function setuid
+[pdg] computing for function sscanf
+[pdg] warning: not implemented by pdg yet: variadic function
+[pdg] Top for function sscanf
+[pdg] computing for function start_logging
+[from] Computing for function start_logging
+[from] Done for function start_logging
+[pdg] done for function start_logging
+[pdg] computing for function strcmp
+[from] Computing for function strcmp
+[from] Done for function strcmp
+[pdg] done for function strcmp
+[pdg] computing for function usb_cleanup
+[from] Computing for function usb_cleanup
+[from] Done for function usb_cleanup
+[pdg] done for function usb_cleanup
+[pdg] computing for function usb_init
+[from] Computing for function usb_init
+[from] Done for function usb_init
+[pdg] done for function usb_init
+[pdg] computing for function adb_main
+[from] Computing for function sscanf
+[from] Done for function sscanf
+[pdg] done for function adb_main
+[pdg] computing for function main
+[from] Computing for function adb_main
+rage.c:161:[from] warning: variadic call detected. Using only 2 argument(s).
+[from] Done for function adb_main
+[pdg] done for function main
+[pdg] ====== PDG GRAPH COMPUTED ======
+[pdg] RESULT for D:
+      [Elem] 1 : InCtrl
+      [Elem] 2 : VarDecl : x_0
+        -[a--]-> 3
+      [Elem] 3 : In1
+        -[a--]-> 2
+      [Elem] 4 : OutRet
+        -[--d]-> 5
+      [Elem] 5 : In("Local port disabled\n"[bits 0 to 7])
+[pdg] RESULT for access:
+      [Elem] 6 : InCtrl
+      [Elem] 7 : VarDecl : x_0
+        -[a--]-> 8
+      [Elem] 8 : In1
+        -[a--]-> 7
+      [Elem] 9 : VarDecl : x_1
+        -[a--]-> 10
+      [Elem] 10 : In2
+        -[a--]-> 9
+      [Elem] 11 : OutRet
+        -[--d]-> 10
+        -[--d]-> 12
+      [Elem] 12 : In("/dev/android_adb"[bits 0 to 7])
+[pdg] RESULT for atexit:
+      [Elem] 13 : InCtrl
+      [Elem] 14 : VarDecl : __func
+        -[a--]-> 15
+      [Elem] 15 : In1
+        -[a--]-> 14
+      [Elem] 16 : OutRet
+[pdg] RESULT for build_local_name:
+      [Elem] 17 : InCtrl
+      [Elem] 18 : VarDecl : x_0
+        -[a--]-> 19
+      [Elem] 19 : In1
+        -[a--]-> 18
+      [Elem] 20 : VarDecl : x_1
+        -[a--]-> 21
+      [Elem] 21 : In2
+        -[a--]-> 20
+      [Elem] 22 : VarDecl : x_2
+        -[a--]-> 23
+      [Elem] 23 : In3
+        -[a--]-> 22
+      [Elem] 24 : Out(local_name[0])
+        -[--d]-> 21
+        -[--d]-> 23
+        -[--d]-> 26
+      [Elem] 25 : OutRet
+        -[--d]-> 21
+        -[--d]-> 23
+        -[--d]-> 24
+      [Elem] 26 : In(local_name[0])
+[pdg] RESULT for capset:
+      [Elem] 27 : InCtrl
+      [Elem] 28 : VarDecl : x_0
+        -[a--]-> 29
+      [Elem] 29 : In1
+        -[a--]-> 28
+      [Elem] 30 : VarDecl : x_1
+        -[a--]-> 31
+      [Elem] 31 : In2
+        -[a--]-> 30
+      [Elem] 32 : Out(header)
+        -[--d]-> 35
+        -[--d]-> 36
+      [Elem] 33 : Out(cap)
+        -[--d]-> 35
+        -[--d]-> 36
+      [Elem] 34 : OutRet
+        -[--d]-> 32
+        -[--d]-> 33
+      [Elem] 35 : In(header)
+      [Elem] 36 : In(cap)
+[pdg] RESULT for exit:
+      [Elem] 37 : InCtrl
+      [Elem] 38 : VarDecl : __status
+        -[a--]-> 39
+      [Elem] 39 : In1
+        -[a--]-> 38
+[pdg] RESULT for fdevent_loop:
+      [Elem] 40 : InCtrl
+      [Elem] 41 : OutRet
+[pdg] RESULT for init_jdwp:
+      [Elem] 42 : InCtrl
+      [Elem] 43 : OutRet
+[pdg] RESULT for init_transport_registration:
+      [Elem] 44 : InCtrl
+      [Elem] 45 : OutRet
+[pdg] RESULT for install_listener:
+      [Elem] 46 : InCtrl
+      [Elem] 47 : VarDecl : x_0
+        -[a--]-> 48
+      [Elem] 48 : In1
+        -[a--]-> 47
+      [Elem] 49 : VarDecl : x_1
+        -[a--]-> 50
+      [Elem] 50 : In2
+        -[a--]-> 49
+      [Elem] 51 : VarDecl : x_2
+        -[a--]-> 52
+      [Elem] 52 : In3
+        -[a--]-> 51
+      [Elem] 53 : Out(local_name[0])
+        -[--d]-> 55
+        -[--d]-> 56
+      [Elem] 54 : OutRet
+        -[--d]-> 53
+        -[--d]-> 55
+      [Elem] 55 : In("*smartsocket*"[bits 0 to 7])
+      [Elem] 56 : In(local_name[0])
+[pdg] RESULT for local_init:
+      [Elem] 57 : InCtrl
+      [Elem] 58 : VarDecl : x_0
+        -[a--]-> 59
+      [Elem] 59 : In1
+        -[a--]-> 58
+      [Elem] 60 : OutRet
+        -[--d]-> 59
+[pdg] RESULT for prctl:
+      [Elem] 61 : InCtrl
+      [Elem] 62 : VarDecl : x_0
+        -[a--]-> 63
+      [Elem] 63 : In1
+        -[a--]-> 62
+      [Elem] 64 : VarDecl : x_1
+        -[a--]-> 65
+      [Elem] 65 : In2
+        -[a--]-> 64
+      [Elem] 66 : VarDecl : x_2
+        -[a--]-> 67
+      [Elem] 67 : In3
+        -[a--]-> 66
+      [Elem] 68 : VarDecl : x_3
+        -[a--]-> 69
+      [Elem] 69 : In4
+        -[a--]-> 68
+      [Elem] 70 : VarDecl : x_4
+        -[a--]-> 71
+      [Elem] 71 : In5
+        -[a--]-> 70
+      [Elem] 72 : OutRet
+        -[--d]-> 63
+        -[--d]-> 65
+        -[--d]-> 67
+        -[--d]-> 69
+        -[--d]-> 71
+[pdg] RESULT for property_get:
+      [Elem] 73 : InCtrl
+      [Elem] 74 : VarDecl : x_0
+        -[a--]-> 75
+      [Elem] 75 : In1
+        -[a--]-> 74
+      [Elem] 76 : VarDecl : x_1
+        -[a--]-> 77
+      [Elem] 77 : In2
+        -[a--]-> 76
+      [Elem] 78 : VarDecl : x_2
+        -[a--]-> 79
+      [Elem] 79 : In3
+        -[a--]-> 78
+      [Elem] 80 : Out(value[0])
+        -[--d]-> 82
+        -[--d]-> 83
+        -[--d]-> 84
+        -[--d]-> 85
+        -[--d]-> 86
+        -[--d]-> 87
+        -[--d]-> 88
+        -[--d]-> 89
+        -[--d]-> 90
+        -[--d]-> 91
+        -[--d]-> 92
+        -[--d]-> 93
+        -[--d]-> 94
+      [Elem] 81 : OutRet
+        -[--d]-> 80
+        -[--d]-> 82
+        -[--d]-> 83
+        -[--d]-> 84
+        -[--d]-> 85
+        -[--d]-> 86
+        -[--d]-> 87
+        -[--d]-> 88
+        -[--d]-> 89
+        -[--d]-> 90
+        -[--d]-> 91
+        -[--d]-> 92
+        -[--d]-> 93
+      [Elem] 82 : In("ro.kernel.qemu"[bits 0 to 7])
+      [Elem] 83 : In(""[bits 0 to 7])
+      [Elem] 84 : In("ro.secure"[bits 0 to 7])
+      [Elem] 85 : In(""[bits 0 to 7])
+      [Elem] 86 : In("ro.debuggable"[bits 0 to 7])
+      [Elem] 87 : In(""[bits 0 to 7])
+      [Elem] 88 : In("service.adb.root"[bits 0 to 7])
+      [Elem] 89 : In(""[bits 0 to 7])
+      [Elem] 90 : In("service.adb.tcp.port"[bits 0 to 7])
+      [Elem] 91 : In(""[bits 0 to 7])
+      [Elem] 92 : In("persist.adb.tcp.port"[bits 0 to 7])
+      [Elem] 93 : In(""[bits 0 to 7])
+      [Elem] 94 : In(value[0])
+[pdg] RESULT for setgid:
+      [Elem] 95 : InCtrl
+      [Elem] 96 : VarDecl : x_0
+        -[a--]-> 97
+      [Elem] 97 : In1
+        -[a--]-> 96
+      [Elem] 98 : OutRet
+        -[--d]-> 97
+[pdg] RESULT for setgroups:
+      [Elem] 99 : InCtrl
+      [Elem] 100 : VarDecl : x_0
+        -[a--]-> 101
+      [Elem] 101 : In1
+        -[a--]-> 100
+      [Elem] 102 : VarDecl : x_1
+        -[a--]-> 103
+      [Elem] 103 : In2
+        -[a--]-> 102
+      [Elem] 104 : Out(groups[0])
+        -[--d]-> 101
+        -[--d]-> 106
+      [Elem] 105 : OutRet
+        -[--d]-> 101
+        -[--d]-> 104
+      [Elem] 106 : In(groups[0])
+[pdg] RESULT for setuid:
+      [Elem] 107 : InCtrl
+      [Elem] 108 : VarDecl : x_0
+        -[a--]-> 109
+      [Elem] 109 : In1
+        -[a--]-> 108
+      [Elem] 110 : OutRet
+        -[--d]-> 109
+[pdg] RESULT for sscanf:
+      Top PDG
+[pdg] RESULT for start_logging:
+      [Elem] 111 : InCtrl
+      [Elem] 112 : OutRet
+[pdg] RESULT for strcmp:
+      [Elem] 113 : InCtrl
+      [Elem] 114 : VarDecl : __s1
+        -[a--]-> 115
+      [Elem] 115 : In1
+        -[a--]-> 114
+      [Elem] 116 : VarDecl : __s2
+        -[a--]-> 117
+      [Elem] 117 : In2
+        -[a--]-> 116
+      [Elem] 118 : OutRet
+        -[--d]-> 119
+        -[--d]-> 120
+        -[--d]-> 121
+        -[--d]-> 122
+        -[--d]-> 123
+      [Elem] 119 : In(value[0])
+      [Elem] 120 : In("1"[bits 0 to 7])
+      [Elem] 121 : In("1"[bits 0 to 7])
+      [Elem] 122 : In("1"[bits 0 to 7])
+      [Elem] 123 : In("1"[bits 0 to 7])
+[pdg] RESULT for usb_cleanup:
+      [Elem] 124 : InCtrl
+      [Elem] 125 : OutRet
+[pdg] RESULT for usb_init:
+      [Elem] 126 : InCtrl
+      [Elem] 127 : OutRet
+[pdg] RESULT for adb_main:
+      [Elem] 128 : InCtrl
+      [Elem] 129 : VarDecl : is_daemon
+        -[a--]-> 130
+      [Elem] 130 : In1
+        -[a--]-> 129
+      [Elem] 131 : VarDecl : server_port
+        -[a--]-> 132
+      [Elem] 132 : In2
+        -[a--]-> 131
+      [Elem] 133 : VarDecl : secure
+      [Elem] 134 : VarDecl : port
+      [Elem] 135 : VarDecl : value
+      [Elem] 136 : VarDecl : tmp
+      [Elem] 137 : VarDecl : tmp_0
+      [Elem] 138 : VarDecl : tmp_1
+      [Elem] 139 : VarDecl : tmp_2
+      [Elem] 140 : VarDecl : header
+      [Elem] 141 : VarDecl : cap
+      [Elem] 142 : VarDecl : tmp_3
+      [Elem] 143 : VarDecl : groups
+      [Elem] 144 : VarDecl : tmp_4
+      [Elem] 145 : VarDecl : tmp_5
+      [Elem] 146 : VarDecl : tmp_6
+      [Elem] 147 : VarDecl : local_name
+      [Elem] 148 : VarDecl : tmp_7
+      [Elem] 149 : VarDecl : tmp_8
+      [Elem] 150 : VarDecl : tmp_9
+      [Elem] 151 : VarDecl : __retres
+      [Elem] 152 : secure = 0;
+        -[-c-]-> 128
+        -[a--]-> 133
+      [Elem] 153 : Call14-InCtrl : atexit(& adb_cleanup);
+        -[-c-]-> 128
+      [Elem] 154 : Call14-In1 : atexit(& adb_cleanup);
+        -[-c-]-> 128
+        -[-c-]-> 153
+      [Elem] 155 : Call15-InCtrl : init_transport_registration();
+        -[-c-]-> 128
+      [Elem] 156 : Call16-InCtrl : property_get("ro.kernel.qemu",value,"");
+        -[-c-]-> 128
+      [Elem] 157 : Call16-In1 : property_get("ro.kernel.qemu",value,"");
+        -[-c-]-> 128
+        -[-c-]-> 156
+      [Elem] 158 : Call16-In2 : property_get("ro.kernel.qemu",value,"");
+        -[-c-]-> 128
+        -[--d]-> 135
+        -[-c-]-> 156
+      [Elem] 159 : Call16-In3 : property_get("ro.kernel.qemu",value,"");
+        -[-c-]-> 128
+        -[-c-]-> 156
+      [Elem] 160 : Call16-Out(value[0]) : property_get("ro.kernel.qemu",value,"");
+        -[-c-]-> 128
+        -[-c-]-> 156
+        -[--d]-> 303
+        -[--d]-> 304
+        -[--d]-> 305
+        -[--d]-> 306
+        -[--d]-> 307
+        -[--d]-> 308
+        -[--d]-> 309
+        -[--d]-> 310
+        -[--d]-> 311
+        -[--d]-> 312
+        -[--d]-> 313
+        -[--d]-> 314
+        -[--d]-> 320
+      [Elem] 161 : Call17-InCtrl : tmp_2 = strcmp((char const *)(value),"1");
+        -[-c-]-> 128
+      [Elem] 162 : Call17-In1 : tmp_2 = strcmp((char const *)(value),"1");
+        -[-c-]-> 128
+        -[--d]-> 135
+        -[-c-]-> 161
+      [Elem] 163 : Call17-In2 : tmp_2 = strcmp((char const *)(value),"1");
+        -[-c-]-> 128
+        -[-c-]-> 161
+      [Elem] 164 : Call17-OutRet : tmp_2 = strcmp((char const *)(value),"1");
+        -[-c-]-> 128
+        -[a--]-> 139
+        -[--d](value[0])-> 160
+        -[-c-]-> 161
+        -[--d]-> 316
+        -[--d]-> 317
+        -[--d]-> 318
+        -[--d]-> 319
+      [Elem] 165 : tmp_2 != 0
+        -[-c-]-> 128
+        -[--d]-> 139
+        -[--d]-> 164
+      [Elem] 166 : Call19-InCtrl : property_get("ro.secure",value,"");
+        -[-c-]-> 128
+        -[-c-]-> 165
+      [Elem] 167 : Call19-In1 : property_get("ro.secure",value,"");
+        -[-c-]-> 128
+        -[-c-]-> 165
+        -[-c-]-> 166
+      [Elem] 168 : Call19-In2 : property_get("ro.secure",value,"");
+        -[-c-]-> 128
+        -[--d]-> 135
+        -[-c-]-> 165
+        -[-c-]-> 166
+      [Elem] 169 : Call19-In3 : property_get("ro.secure",value,"");
+        -[-c-]-> 128
+        -[-c-]-> 165
+        -[-c-]-> 166
+      [Elem] 170 : Call19-Out(value[0]) : property_get("ro.secure",value,"");
+        -[-c-]-> 128
+        -[--d](value[0])-> 160
+        -[-c-]-> 165
+        -[-c-]-> 166
+        -[--d]-> 303
+        -[--d]-> 304
+        -[--d]-> 305
+        -[--d]-> 306
+        -[--d]-> 307
+        -[--d]-> 308
+        -[--d]-> 309
+        -[--d]-> 310
+        -[--d]-> 311
+        -[--d]-> 312
+        -[--d]-> 313
+        -[--d]-> 314
+      [Elem] 171 : Call20-InCtrl : tmp_1 = strcmp((char const *)(value),"1");
+        -[-c-]-> 128
+        -[-c-]-> 165
+      [Elem] 172 : Call20-In1 : tmp_1 = strcmp((char const *)(value),"1");
+        -[-c-]-> 128
+        -[--d]-> 135
+        -[-c-]-> 165
+        -[-c-]-> 171
+      [Elem] 173 : Call20-In2 : tmp_1 = strcmp((char const *)(value),"1");
+        -[-c-]-> 128
+        -[-c-]-> 165
+        -[-c-]-> 171
+      [Elem] 174 : Call20-OutRet : tmp_1 = strcmp((char const *)(value),"1");
+        -[-c-]-> 128
+        -[a--]-> 138
+        -[-c-]-> 165
+        -[--d](value[0])-> 170
+        -[-c-]-> 171
+        -[--d]-> 316
+        -[--d]-> 317
+        -[--d]-> 318
+        -[--d]-> 319
+      [Elem] 175 : tmp_1 == 0
+        -[-c-]-> 128
+        -[--d]-> 138
+        -[-c-]-> 165
+        -[--d]-> 174
+      [Elem] 176 : secure = 1;
+        -[-c-]-> 128
+        -[a--]-> 133
+        -[-c-]-> 165
+        -[-c-]-> 175
+      [Elem] 177 : Call23-InCtrl : property_get("ro.debuggable",value,"");
+        -[-c-]-> 128
+        -[-c-]-> 165
+        -[-c-]-> 175
+      [Elem] 178 : Call23-In1 : property_get("ro.debuggable",value,"");
+        -[-c-]-> 128
+        -[-c-]-> 165
+        -[-c-]-> 175
+        -[-c-]-> 177
+      [Elem] 179 : Call23-In2 : property_get("ro.debuggable",value,"");
+        -[-c-]-> 128
+        -[--d]-> 135
+        -[-c-]-> 165
+        -[-c-]-> 175
+        -[-c-]-> 177
+      [Elem] 180 : Call23-In3 : property_get("ro.debuggable",value,"");
+        -[-c-]-> 128
+        -[-c-]-> 165
+        -[-c-]-> 175
+        -[-c-]-> 177
+      [Elem] 181 : Call23-Out(value[0]) : property_get("ro.debuggable",value,"");
+        -[-c-]-> 128
+        -[-c-]-> 165
+        -[--d](value[0])-> 170
+        -[-c-]-> 175
+        -[-c-]-> 177
+        -[--d]-> 303
+        -[--d]-> 304
+        -[--d]-> 305
+        -[--d]-> 306
+        -[--d]-> 307
+        -[--d]-> 308
+        -[--d]-> 309
+        -[--d]-> 310
+        -[--d]-> 311
+        -[--d]-> 312
+        -[--d]-> 313
+        -[--d]-> 314
+      [Elem] 182 : Call24-InCtrl : tmp_0 = strcmp((char const *)(value),"1");
+        -[-c-]-> 128
+        -[-c-]-> 165
+        -[-c-]-> 175
+      [Elem] 183 : Call24-In1 : tmp_0 = strcmp((char const *)(value),"1");
+        -[-c-]-> 128
+        -[--d]-> 135
+        -[-c-]-> 165
+        -[-c-]-> 175
+        -[-c-]-> 182
+      [Elem] 184 : Call24-In2 : tmp_0 = strcmp((char const *)(value),"1");
+        -[-c-]-> 128
+        -[-c-]-> 165
+        -[-c-]-> 175
+        -[-c-]-> 182
+      [Elem] 185 : Call24-OutRet : tmp_0 = strcmp((char const *)(value),"1");
+        -[-c-]-> 128
+        -[a--]-> 137
+        -[-c-]-> 165
+        -[-c-]-> 175
+        -[--d](value[0])-> 181
+        -[-c-]-> 182
+        -[--d]-> 316
+        -[--d]-> 317
+        -[--d]-> 318
+        -[--d]-> 319
+      [Elem] 186 : tmp_0 == 0
+        -[-c-]-> 128
+        -[--d]-> 137
+        -[-c-]-> 165
+        -[-c-]-> 175
+        -[--d]-> 185
+      [Elem] 187 : Call26-InCtrl : property_get("service.adb.root",value,"");
+        -[-c-]-> 128
+        -[-c-]-> 165
+        -[-c-]-> 175
+        -[-c-]-> 186
+      [Elem] 188 : Call26-In1 : property_get("service.adb.root",value,"");
+        -[-c-]-> 128
+        -[-c-]-> 165
+        -[-c-]-> 175
+        -[-c-]-> 186
+        -[-c-]-> 187
+      [Elem] 189 : Call26-In2 : property_get("service.adb.root",value,"");
+        -[-c-]-> 128
+        -[--d]-> 135
+        -[-c-]-> 165
+        -[-c-]-> 175
+        -[-c-]-> 186
+        -[-c-]-> 187
+      [Elem] 190 : Call26-In3 : property_get("service.adb.root",value,"");
+        -[-c-]-> 128
+        -[-c-]-> 165
+        -[-c-]-> 175
+        -[-c-]-> 186
+        -[-c-]-> 187
+      [Elem] 191 : Call26-Out(value[0]) : property_get("service.adb.root",value,"");
+        -[-c-]-> 128
+        -[-c-]-> 165
+        -[-c-]-> 175
+        -[--d](value[0])-> 181
+        -[-c-]-> 186
+        -[-c-]-> 187
+        -[--d]-> 303
+        -[--d]-> 304
+        -[--d]-> 305
+        -[--d]-> 306
+        -[--d]-> 307
+        -[--d]-> 308
+        -[--d]-> 309
+        -[--d]-> 310
+        -[--d]-> 311
+        -[--d]-> 312
+        -[--d]-> 313
+        -[--d]-> 314
+      [Elem] 192 : Call27-InCtrl : tmp = strcmp((char const *)(value),"1");
+        -[-c-]-> 128
+        -[-c-]-> 165
+        -[-c-]-> 175
+        -[-c-]-> 186
+      [Elem] 193 : Call27-In1 : tmp = strcmp((char const *)(value),"1");
+        -[-c-]-> 128
+        -[--d]-> 135
+        -[-c-]-> 165
+        -[-c-]-> 175
+        -[-c-]-> 186
+        -[-c-]-> 192
+      [Elem] 194 : Call27-In2 : tmp = strcmp((char const *)(value),"1");
+        -[-c-]-> 128
+        -[-c-]-> 165
+        -[-c-]-> 175
+        -[-c-]-> 186
+        -[-c-]-> 192
+      [Elem] 195 : Call27-OutRet : tmp = strcmp((char const *)(value),"1");
+        -[-c-]-> 128
+        -[a--]-> 136
+        -[-c-]-> 165
+        -[-c-]-> 175
+        -[-c-]-> 186
+        -[--d](value[0])-> 191
+        -[-c-]-> 192
+        -[--d]-> 316
+        -[--d]-> 317
+        -[--d]-> 318
+        -[--d]-> 319
+      [Elem] 196 : tmp == 0
+        -[-c-]-> 128
+        -[--d]-> 136
+        -[-c-]-> 165
+        -[-c-]-> 175
+        -[-c-]-> 186
+        -[--d]-> 195
+      [Elem] 197 : secure = 0;
+        -[-c-]-> 128
+        -[a--]-> 133
+        -[-c-]-> 165
+        -[-c-]-> 175
+        -[-c-]-> 186
+        -[-c-]-> 196
+      [Elem] 198 : secure
+        -[-c-]-> 128
+        -[--d]-> 133
+        -[--d]-> 152
+        -[--d]-> 176
+        -[--d]-> 197
+      [Elem] 199 : Call36-InCtrl : tmp_3 = prctl(12,1,0,0,0);
+        -[-c-]-> 128
+        -[-c-]-> 198
+      [Elem] 200 : Call36-In1 : tmp_3 = prctl(12,1,0,0,0);
+        -[-c-]-> 128
+        -[-c-]-> 198
+        -[-c-]-> 199
+      [Elem] 201 : Call36-In2 : tmp_3 = prctl(12,1,0,0,0);
+        -[-c-]-> 128
+        -[-c-]-> 198
+        -[-c-]-> 199
+      [Elem] 202 : Call36-In3 : tmp_3 = prctl(12,1,0,0,0);
+        -[-c-]-> 128
+        -[-c-]-> 198
+        -[-c-]-> 199
+      [Elem] 203 : Call36-In4 : tmp_3 = prctl(12,1,0,0,0);
+        -[-c-]-> 128
+        -[-c-]-> 198
+        -[-c-]-> 199
+      [Elem] 204 : Call36-In5 : tmp_3 = prctl(12,1,0,0,0);
+        -[-c-]-> 128
+        -[-c-]-> 198
+        -[-c-]-> 199
+      [Elem] 205 : Call36-OutRet : tmp_3 = prctl(12,1,0,0,0);
+        -[-c-]-> 128
+        -[a--]-> 142
+        -[-c-]-> 198
+        -[-c-]-> 199
+        -[--d]-> 200
+        -[--d]-> 201
+        -[--d]-> 202
+        -[--d]-> 203
+        -[--d]-> 204
+      [Elem] 206 : Call69-InCtrl : build_local_name(local_name,(int)sizeof(local_name),server_port);
+        -[-c-]-> 128
+        -[-c-]-> 198
+      [Elem] 207 : Call69-In1 : build_local_name(local_name,(int)sizeof(local_name),server_port);
+        -[-c-]-> 128
+        -[--d]-> 147
+        -[-c-]-> 198
+        -[-c-]-> 206
+      [Elem] 208 : Call69-In2 : build_local_name(local_name,(int)sizeof(local_name),server_port);
+        -[-c-]-> 128
+        -[--d]-> 147
+        -[-c-]-> 198
+        -[-c-]-> 206
+      [Elem] 209 : Call69-In3 : build_local_name(local_name,(int)sizeof(local_name),server_port);
+        -[-c-]-> 128
+        -[--d]-> 131
+        -[--d]-> 132
+        -[-c-]-> 198
+        -[-c-]-> 206
+      [Elem] 210 : Call69-Out(local_name[0]) : build_local_name(local_name,(int)sizeof(local_name),server_port);
+        -[-c-]-> 128
+        -[-c-]-> 198
+        -[-c-]-> 206
+        -[--d]-> 208
+        -[--d]-> 209
+      [Elem] 211 : tmp_3 != 0
+        -[-c-]-> 128
+        -[--d]-> 142
+        -[-c-]-> 198
+        -[--d]-> 205
+      [Elem] 212 : Call70-InCtrl : tmp_7 = install_listener(local_name,"*smartsocket*",(void *)0);
+        -[-c-]-> 128
+        -[-c-]-> 198
+      [Elem] 213 : Call70-In1 : tmp_7 = install_listener(local_name,"*smartsocket*",(void *)0);
+        -[-c-]-> 128
+        -[--d]-> 147
+        -[-c-]-> 198
+        -[-c-]-> 212
+      [Elem] 214 : Call70-In2 : tmp_7 = install_listener(local_name,"*smartsocket*",(void *)0);
+        -[-c-]-> 128
+        -[-c-]-> 198
+        -[-c-]-> 212
+      [Elem] 215 : Call70-In3 : tmp_7 = install_listener(local_name,"*smartsocket*",(void *)0);
+        -[-c-]-> 128
+        -[-c-]-> 198
+        -[-c-]-> 212
+      [Elem] 216 : Call70-Out(local_name[0]) : tmp_7 = install_listener(local_name,"*smartsocket*",(void *)0);
+        -[-c-]-> 128
+        -[-c-]-> 198
+        -[--d](local_name[0])-> 210
+        -[-c-]-> 212
+        -[--d]-> 315
+      [Elem] 217 : Call70-OutRet : tmp_7 = install_listener(local_name,"*smartsocket*",(void *)0);
+        -[-c-]-> 128
+        -[a--]-> 148
+        -[-c-]-> 198
+        -[--d](local_name[0])-> 210
+        -[-c-]-> 212
+        -[--d]-> 315
+      [Elem] 218 : Call38-InCtrl : exit(1);
+        -[-c-]-> 128
+        -[-c-]-> 198
+        -[-c-]-> 211
+      [Elem] 219 : Call38-In1 : exit(1);
+        -[-c-]-> 128
+        -[-c-]-> 198
+        -[-c-]-> 211
+        -[-c-]-> 218
+      [Elem] 220 : groups[0] = (unsigned int)2;
+        -[-c-]-> 128
+        -[a--]-> 143
+        -[-c-]-> 198
+      [Elem] 221 : tmp_7
+        -[-c-]-> 128
+        -[--d]-> 148
+        -[-c-]-> 198
+        -[--d]-> 217
+      [Elem] 222 : groups[1] = (unsigned int)6;
+        -[-c-]-> 128
+        -[a--]-> 143
+        -[-c-]-> 198
+      [Elem] 223 : Call72-InCtrl : exit(1);
+        -[-c-]-> 128
+        -[-c-]-> 198
+        -[-c-]-> 221
+      [Elem] 224 : Call72-In1 : exit(1);
+        -[-c-]-> 128
+        -[-c-]-> 198
+        -[-c-]-> 221
+        -[-c-]-> 223
+      [Elem] 225 : groups[2] = (unsigned int)5;
+        -[-c-]-> 128
+        -[a--]-> 143
+        -[-c-]-> 198
+      [Elem] 226 : groups[3] = (unsigned int)4;
+        -[-c-]-> 128
+        -[a--]-> 143
+        -[-c-]-> 198
+      [Elem] 227 : groups[4] = (unsigned int)3;
+        -[-c-]-> 128
+        -[a--]-> 143
+        -[-c-]-> 198
+      [Elem] 228 : groups[5] = (unsigned int)8;
+        -[-c-]-> 128
+        -[a--]-> 143
+        -[-c-]-> 198
+      [Elem] 229 : groups[6] = (unsigned int)9;
+        -[-c-]-> 128
+        -[a--]-> 143
+        -[-c-]-> 198
+      [Elem] 230 : groups[7] = (unsigned int)10;
+        -[-c-]-> 128
+        -[a--]-> 143
+        -[-c-]-> 198
+      [Elem] 231 : groups[8] = (unsigned int)7;
+        -[-c-]-> 128
+        -[a--]-> 143
+        -[-c-]-> 198
+      [Elem] 232 : Call49-InCtrl : tmp_4 = setgroups((int)(sizeof(groups) / sizeof(groups[0])),groups);
+        -[-c-]-> 128
+        -[-c-]-> 198
+      [Elem] 233 : Call49-In1 : tmp_4 = setgroups((int)(sizeof(groups) / sizeof(groups[0])),groups);
+        -[-c-]-> 128
+        -[--d]-> 143
+        -[-c-]-> 198
+        -[-c-]-> 232
+      [Elem] 234 : Call49-In2 : tmp_4 = setgroups((int)(sizeof(groups) / sizeof(groups[0])),groups);
+        -[-c-]-> 128
+        -[--d]-> 143
+        -[-c-]-> 198
+        -[-c-]-> 232
+      [Elem] 235 : Call49-Out(groups[0]) : tmp_4 = setgroups((int)(sizeof(groups) / sizeof(groups[0])),groups);
+        -[-c-]-> 128
+        -[-c-]-> 198
+        -[--d]-> 220
+        -[-c-]-> 232
+        -[--d]-> 233
+      [Elem] 236 : Call49-OutRet : tmp_4 = setgroups((int)(sizeof(groups) / sizeof(groups[0])),groups);
+        -[-c-]-> 128
+        -[a--]-> 144
+        -[-c-]-> 198
+        -[--d]-> 220
+        -[-c-]-> 232
+        -[--d]-> 233
+      [Elem] 237 : tmp_4 != 0
+        -[-c-]-> 128
+        -[--d]-> 144
+        -[-c-]-> 198
+        -[--d]-> 236
+      [Elem] 238 : Call51-InCtrl : exit(1);
+        -[-c-]-> 128
+        -[-c-]-> 198
+        -[-c-]-> 237
+      [Elem] 239 : Call51-In1 : exit(1);
+        -[-c-]-> 128
+        -[-c-]-> 198
+        -[-c-]-> 237
+        -[-c-]-> 238
+      [Elem] 240 : Call53-InCtrl : tmp_5 = setgid(1);
+        -[-c-]-> 128
+        -[-c-]-> 198
+      [Elem] 241 : Call53-In1 : tmp_5 = setgid(1);
+        -[-c-]-> 128
+        -[-c-]-> 198
+        -[-c-]-> 240
+      [Elem] 242 : Call53-OutRet : tmp_5 = setgid(1);
+        -[-c-]-> 128
+        -[a--]-> 145
+        -[-c-]-> 198
+        -[-c-]-> 240
+        -[--d]-> 241
+      [Elem] 243 : tmp_5 != 0
+        -[-c-]-> 128
+        -[--d]-> 145
+        -[-c-]-> 198
+        -[--d]-> 242
+      [Elem] 244 : Call55-InCtrl : exit(1);
+        -[-c-]-> 128
+        -[-c-]-> 198
+        -[-c-]-> 243
+      [Elem] 245 : Call55-In1 : exit(1);
+        -[-c-]-> 128
+        -[-c-]-> 198
+        -[-c-]-> 243
+        -[-c-]-> 244
+      [Elem] 246 : Call57-InCtrl : tmp_6 = setuid(1);
+        -[-c-]-> 128
+        -[-c-]-> 198
+      [Elem] 247 : Call57-In1 : tmp_6 = setuid(1);
+        -[-c-]-> 128
+        -[-c-]-> 198
+        -[-c-]-> 246
+      [Elem] 248 : Call57-OutRet : tmp_6 = setuid(1);
+        -[-c-]-> 128
+        -[a--]-> 146
+        -[-c-]-> 198
+        -[-c-]-> 246
+        -[--d]-> 247
+      [Elem] 249 : tmp_6 != 0
+        -[-c-]-> 128
+        -[--d]-> 146
+        -[-c-]-> 198
+        -[--d]-> 248
+      [Elem] 250 : Call59-InCtrl : exit(1);
+        -[-c-]-> 128
+        -[-c-]-> 198
+        -[-c-]-> 249
+      [Elem] 251 : Call59-In1 : exit(1);
+        -[-c-]-> 128
+        -[-c-]-> 198
+        -[-c-]-> 249
+        -[-c-]-> 250
+      [Elem] 252 : header.version = (unsigned int)1;
+        -[-c-]-> 128
+        -[a--]-> 140
+        -[-c-]-> 198
+      [Elem] 253 : header.pid = 0;
+        -[-c-]-> 128
+        -[a--]-> 140
+        -[-c-]-> 198
+      [Elem] 254 : unspecified sequence
+        -[-c-]-> 128
+        -[-c-]-> 198
+      [Elem] 255 : cap.permitted = (unsigned int)(1 << 13);
+        -[-c-]-> 128
+        -[a--]-> 141
+        -[-c-]-> 198
+        -[-c-]-> 254
+      [Elem] 256 : cap.effective = cap.permitted;
+        -[-c-]-> 128
+        -[a-d]-> 141
+        -[-c-]-> 198
+        -[-c-]-> 254
+        -[--d]-> 255
+      [Elem] 257 : cap.inheritable = (unsigned int)0;
+        -[-c-]-> 128
+        -[a--]-> 141
+        -[-c-]-> 198
+      [Elem] 258 : Call67-InCtrl : capset(& header,& cap);
+        -[-c-]-> 128
+        -[-c-]-> 198
+      [Elem] 259 : Call67-In1 : capset(& header,& cap);
+        -[-c-]-> 128
+        -[--d]-> 140
+        -[-c-]-> 198
+        -[-c-]-> 258
+      [Elem] 260 : Call67-In2 : capset(& header,& cap);
+        -[-c-]-> 128
+        -[--d]-> 141
+        -[-c-]-> 198
+        -[-c-]-> 258
+      [Elem] 261 : Call67-Out(header) : capset(& header,& cap);
+        -[-c-]-> 128
+        -[-c-]-> 198
+        -[--d]-> 252
+        -[--d]-> 253
+        -[--d]-> 255
+        -[--d]-> 256
+        -[--d]-> 257
+        -[-c-]-> 258
+      [Elem] 262 : Call67-Out(cap) : capset(& header,& cap);
+        -[-c-]-> 128
+        -[-c-]-> 198
+        -[--d]-> 252
+        -[--d]-> 253
+        -[--d]-> 255
+        -[--d]-> 256
+        -[--d]-> 257
+        -[-c-]-> 258
+      [Elem] 263 : Call68-InCtrl : D("Local port disabled\n");
+        -[-c-]-> 128
+        -[-c-]-> 198
+      [Elem] 264 : Call68-In1 : D("Local port disabled\n");
+        -[-c-]-> 128
+        -[-c-]-> 198
+        -[-c-]-> 263
+      [Elem] 265 : Call74-InCtrl : property_get("service.adb.tcp.port",value,"");
+        -[-c-]-> 128
+      [Elem] 266 : Call74-In1 : property_get("service.adb.tcp.port",value,"");
+        -[-c-]-> 128
+        -[-c-]-> 265
+      [Elem] 267 : Call74-In2 : property_get("service.adb.tcp.port",value,"");
+        -[-c-]-> 128
+        -[--d]-> 135
+        -[-c-]-> 265
+      [Elem] 268 : Call74-In3 : property_get("service.adb.tcp.port",value,"");
+        -[-c-]-> 128
+        -[-c-]-> 265
+      [Elem] 269 : Call74-Out(value[0]) : property_get("service.adb.tcp.port",value,"");
+        -[-c-]-> 128
+        -[--d](value[0])-> 160
+        -[--d](value[0])-> 170
+        -[--d](value[0])-> 181
+        -[--d](value[0])-> 191
+        -[-c-]-> 265
+        -[--d]-> 303
+        -[--d]-> 304
+        -[--d]-> 305
+        -[--d]-> 306
+        -[--d]-> 307
+        -[--d]-> 308
+        -[--d]-> 309
+        -[--d]-> 310
+        -[--d]-> 311
+        -[--d]-> 312
+        -[--d]-> 313
+        -[--d]-> 314
+      [Elem] 270 : ! value[0]
+        -[-c-]-> 128
+        -[--d]-> 135
+        -[--d](value[0])-> 269
+      [Elem] 271 : Call76-InCtrl : property_get("persist.adb.tcp.port",value,"");
+        -[-c-]-> 128
+        -[-c-]-> 270
+      [Elem] 272 : Call76-In1 : property_get("persist.adb.tcp.port",value,"");
+        -[-c-]-> 128
+        -[-c-]-> 270
+        -[-c-]-> 271
+      [Elem] 273 : Call76-In2 : property_get("persist.adb.tcp.port",value,"");
+        -[-c-]-> 128
+        -[--d]-> 135
+        -[-c-]-> 270
+        -[-c-]-> 271
+      [Elem] 274 : Call76-In3 : property_get("persist.adb.tcp.port",value,"");
+        -[-c-]-> 128
+        -[-c-]-> 270
+        -[-c-]-> 271
+      [Elem] 275 : Call76-Out(value[0]) : property_get("persist.adb.tcp.port",value,"");
+        -[-c-]-> 128
+        -[--d](value[0])-> 269
+        -[-c-]-> 270
+        -[-c-]-> 271
+        -[--d]-> 303
+        -[--d]-> 304
+        -[--d]-> 305
+        -[--d]-> 306
+        -[--d]-> 307
+        -[--d]-> 308
+        -[--d]-> 309
+        -[--d]-> 310
+        -[--d]-> 311
+        -[--d]-> 312
+        -[--d]-> 313
+        -[--d]-> 314
+      [Elem] 276 : Call78-InCtrl : tmp_9 = sscanf((char const *)(value),"%d",& port);
+        -[-c-]-> 128
+      [Elem] 277 : Call78-In1 : tmp_9 = sscanf((char const *)(value),"%d",& port);
+        -[-c-]-> 128
+        -[--d]-> 135
+        -[-c-]-> 276
+      [Elem] 278 : Call78-In2 : tmp_9 = sscanf((char const *)(value),"%d",& port);
+        -[-c-]-> 128
+        -[-c-]-> 276
+      [Elem] 279 : Call78-In3 : tmp_9 = sscanf((char const *)(value),"%d",& port);
+        -[-c-]-> 128
+        -[--d]-> 134
+      [Elem] 280 : Call78-OutRet : tmp_9 = sscanf((char const *)(value),"%d",& port);
+        -[-c-]-> 128
+        -[a--]-> 150
+        -[--d](value[0])-> 269
+        -[--d](value[0])-> 275
+        -[-c-]-> 276
+        -[--d]-> 302
+      [Elem] 281 : tmp_9 == 1
+        -[-c-]-> 128
+        -[--d]-> 150
+        -[--d]-> 280
+      [Elem] 282 : port > 0
+        -[-c-]-> 128
+        -[--d]-> 134
+        -[-c-]-> 281
+      [Elem] 283 : goto _LAND;
+        -[-c-]-> 128
+        -[-c-]-> 281
+        -[-c-]-> 284
+      [Elem] 284 : _LAND: /* internal */
+        -[-c-]-> 128
+        -[-c-]-> 281
+      [Elem] 285 : Call84-InCtrl : _LAND: /* internal */ tmp_8 = access("/dev/android_adb",14);
+        -[-c-]-> 128
+        -[-c-]-> 281
+      [Elem] 286 : Call84-In1 : _LAND: /* internal */ tmp_8 = access("/dev/android_adb",14);
+        -[-c-]-> 128
+        -[-c-]-> 281
+        -[-c-]-> 285
+      [Elem] 287 : Call84-In2 : _LAND: /* internal */ tmp_8 = access("/dev/android_adb",14);
+        -[-c-]-> 128
+        -[-c-]-> 281
+        -[-c-]-> 285
+      [Elem] 288 : Call84-OutRet : _LAND: /* internal */ tmp_8 = access("/dev/android_adb",14);
+        -[-c-]-> 128
+        -[a--]-> 149
+        -[-c-]-> 281
+        -[-c-]-> 285
+        -[--d]-> 287
+        -[--d]-> 301
+      [Elem] 289 : tmp_8 == 0
+        -[-c-]-> 128
+        -[--d]-> 149
+        -[-c-]-> 281
+        -[--d]-> 288
+      [Elem] 290 : Call86-InCtrl : usb_init();
+        -[-c-]-> 128
+        -[-c-]-> 281
+        -[-c-]-> 289
+      [Elem] 291 : Call87-InCtrl : local_init(15);
+        -[-c-]-> 128
+        -[-c-]-> 281
+        -[-c-]-> 289
+      [Elem] 292 : Call87-In1 : local_init(15);
+        -[-c-]-> 128
+        -[-c-]-> 281
+        -[-c-]-> 289
+        -[-c-]-> 291
+      [Elem] 293 : Call88-InCtrl : init_jdwp();
+        -[-c-]-> 128
+      [Elem] 294 : is_daemon
+        -[-c-]-> 128
+        -[--d]-> 129
+        -[--d]-> 130
+      [Elem] 295 : Call91-InCtrl : start_logging();
+        -[-c-]-> 128
+      [Elem] 296 : Call93-InCtrl : fdevent_loop();
+        -[-c-]-> 128
+      [Elem] 297 : Call94-InCtrl : usb_cleanup();
+        -[-c-]-> 128
+      [Elem] 298 : __retres = 0;
+        -[-c-]-> 128
+        -[a--]-> 151
+      [Elem] 299 : return __retres;
+        -[-c-]-> 128
+        -[--d]-> 151
+        -[--d]-> 298
+      [Elem] 300 : OutRet
+        -[--d]-> 299
+      [Elem] 301 : In("/dev/android_adb"[bits 0 to 7])
+      [Elem] 302 : In("%d"[bits 0 to 7])
+      [Elem] 303 : In("ro.kernel.qemu"[bits 0 to 7])
+      [Elem] 304 : In(""[bits 0 to 7])
+      [Elem] 305 : In("ro.secure"[bits 0 to 7])
+      [Elem] 306 : In(""[bits 0 to 7])
+      [Elem] 307 : In("ro.debuggable"[bits 0 to 7])
+      [Elem] 308 : In(""[bits 0 to 7])
+      [Elem] 309 : In("service.adb.root"[bits 0 to 7])
+      [Elem] 310 : In(""[bits 0 to 7])
+      [Elem] 311 : In("service.adb.tcp.port"[bits 0 to 7])
+      [Elem] 312 : In(""[bits 0 to 7])
+      [Elem] 313 : In("persist.adb.tcp.port"[bits 0 to 7])
+      [Elem] 314 : In(""[bits 0 to 7])
+      [Elem] 315 : In("*smartsocket*"[bits 0 to 7])
+      [Elem] 316 : In("1"[bits 0 to 7])
+      [Elem] 317 : In("1"[bits 0 to 7])
+      [Elem] 318 : In("1"[bits 0 to 7])
+      [Elem] 319 : In("1"[bits 0 to 7])
+      [Elem] 320 : In(value[0])
+[pdg] RESULT for main:
+      [Elem] 321 : InCtrl
+      [Elem] 322 : VarDecl : argc
+        -[a--]-> 323
+      [Elem] 323 : In1
+        -[a--]-> 322
+      [Elem] 324 : VarDecl : argv
+        -[a--]-> 325
+      [Elem] 325 : In2
+        -[a--]-> 324
+      [Elem] 326 : VarDecl : __retres
+      [Elem] 327 : Call10-InCtrl : adb_main(1,8080);
+        -[-c-]-> 321
+      [Elem] 328 : Call10-In1 : adb_main(1,8080);
+        -[-c-]-> 321
+        -[-c-]-> 327
+      [Elem] 329 : Call10-In2 : adb_main(1,8080);
+        -[-c-]-> 321
+        -[-c-]-> 327
+      [Elem] 330 : __retres = 0;
+        -[-c-]-> 321
+        -[a--]-> 326
+      [Elem] 331 : return __retres;
+        -[-c-]-> 321
+        -[--d]-> 326
+        -[--d]-> 330
+      [Elem] 332 : OutRet
+        -[--d]-> 331
