@@ -55,12 +55,14 @@ zimp.c:75:[kernel] warning: out of bounds read. assert \valid_read(args+4);
 [pdg] computing for function forkAndSpecializeCommon
 zimp.c:156:[pdg] warning: no final state. Probably unreachable...
 [pdg] done for function forkAndSpecializeCommon
+[pdg] dot file generated in graph.forkAndSpecializeCommon.dot
 [pdg] computing for function main
 [from] Computing for function forkAndSpecializeCommon
 [from] Non-terminating function forkAndSpecializeCommon (no dependencies)
 [from] Done for function forkAndSpecializeCommon
 zimp.c:164:[pdg] warning: no final state. Probably unreachable...
 [pdg] done for function main
+[pdg] dot file generated in graph.main.dot
 [pdg] ====== PDG GRAPH COMPUTED ======
 [pdg] RESULT for forkAndSpecializeCommon:
       [Elem] 1 : InCtrl
