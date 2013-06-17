@@ -90,6 +90,8 @@ with open(fname2) as infile:
 
         if (start == True):
             elements = line.split()
+            if (len(elements[0]) < 5):
+                continue
             if (elements[0] == "[Elem]"):
                 nodes2.append(pdgnode(elements[1]))
                 cur_node = nodes2[-1]
