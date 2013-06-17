@@ -1,5 +1,17 @@
-<Maciej part here>
+Frama-C usage:
 
+To make text output:
+    frama-c -pdg-print -pdg file.c > file.out
+
+To make PDF:
+    frama-c -pdg -pdg-dot graph -pdg-print file.c
+    dot -Tpdf graph.function-name.dot > file.c
+
+If header files need to be included, this can be done with the -cpp-command flag, e.g.:
+    frama-c -pdg-print -cpp-command "gcc -C -E -I. -I../lib" file.c
+
+Or, you can use frama-c's incomplete implementation of libc by doing:
+    frama-c -pdg-print -cpp-extra-args="-I/usr/local/share/frama-c/libc -nostdinc" file.c
 
 Usage for comparator.py:
 
