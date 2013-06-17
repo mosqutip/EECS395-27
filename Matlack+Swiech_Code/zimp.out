@@ -1,0 +1,81 @@
+[kernel] preprocessing with "gcc -C -E -I.  zimp.c"
+/usr/include/bits/byteswap.h:47:[kernel] warning: Calling undeclared function __builtin_bswap32. Old style K&R code?
+/usr/include/bits/byteswap.h:111:[kernel] warning: Calling undeclared function __builtin_bswap64. Old style K&R code?
+zimp.c:69:[kernel] warning: Calling undeclared function adb_main. Old style K&R code?
+zimp.c:84:[kernel] warning: Calling undeclared function dvmThrowException. Old style K&R code?
+zimp.c:91:[kernel] warning: Calling undeclared function LOGE. Old style K&R code?
+zimp.c:92:[kernel] warning: Calling undeclared function dvmAbort. Old style K&R code?
+zimp.c:90:[kernel] warning: Calling undeclared function dvmGcPreZygoteFork. Old style K&R code?
+zimp.c:95:[kernel] warning: Calling undeclared function setSignalHandler. Old style K&R code?
+zimp.c:97:[kernel] warning: Calling undeclared function dvmDumpLoaderStats. Old style K&R code?
+zimp.c:98:[kernel] warning: Calling undeclared function fork. Old style K&R code?
+zimp.c:119:[kernel] warning: Calling undeclared function setgroupsIntarray. Old style K&R code?
+zimp.c:122:[kernel] warning: Calling undeclared function LOGW. Old style K&R code?
+zimp.c:125:[kernel] warning: Calling undeclared function setrlimitsFromArray. Old style K&R code?
+zimp.c:131:[kernel] warning: Calling undeclared function setgid. Old style K&R code?
+zimp.c:137:[kernel] warning: Calling undeclared function setuid. Old style K&R code?
+zimp.c:146:[kernel] warning: Calling undeclared function dvmThreadSelf. Old style K&R code?
+zimp.c:147:[kernel] warning: Calling undeclared function dvmGetSysThreadId. Old style K&R code?
+zimp.c:150:[kernel] warning: Calling undeclared function enableDebugFeatures. Old style K&R code?
+zimp.c:152:[kernel] warning: Calling undeclared function unsetSignalHandler. Old style K&R code?
+zimp.c:154:[kernel] warning: Calling undeclared function dvmInitAfterZygote. Old style K&R code?
+[value] Analyzing a complete application starting at main
+[value] Computing initial state
+[value] Initial state computed
+[value] Values of globals at initialization
+        gDvm ∈ {0}
+[value] computing for function adb_main <- main.
+        Called from zimp.c:69.
+[kernel] warning: Neither code nor specification for function adb_main, generating default assigns from the prototype
+[value] using specification for function adb_main
+[value] Done for function adb_main
+[value] Recording results for main
+[value] done for function main
+[pdg] computing for function adb_main
+[from] Computing for function adb_main
+[from] Done for function adb_main
+[pdg] done for function adb_main
+[pdg] computing for function main
+[pdg] done for function main
+[pdg] ====== PDG GRAPH COMPUTED ======
+[pdg] RESULT for adb_main:
+      [Elem] 1 : InCtrl
+      [Elem] 2 : VarDecl : x_0
+        -[a--]-> 3
+      [Elem] 3 : In1
+        -[a--]-> 2
+      [Elem] 4 : VarDecl : x_1
+        -[a--]-> 5
+      [Elem] 5 : In2
+        -[a--]-> 4
+      [Elem] 6 : OutRet
+        -[--d]-> 3
+        -[--d]-> 5
+[pdg] RESULT for main:
+      [Elem] 7 : InCtrl
+      [Elem] 8 : VarDecl : argc
+        -[a--]-> 9
+      [Elem] 9 : In1
+        -[a--]-> 8
+      [Elem] 10 : VarDecl : argv
+        -[a--]-> 11
+      [Elem] 11 : In2
+        -[a--]-> 10
+      [Elem] 12 : VarDecl : __retres
+      [Elem] 13 : Call10-InCtrl : adb_main(1,8080);
+        -[-c-]-> 7
+      [Elem] 14 : Call10-In1 : adb_main(1,8080);
+        -[-c-]-> 7
+        -[-c-]-> 13
+      [Elem] 15 : Call10-In2 : adb_main(1,8080);
+        -[-c-]-> 7
+        -[-c-]-> 13
+      [Elem] 16 : __retres = 0;
+        -[-c-]-> 7
+        -[a--]-> 12
+      [Elem] 17 : return __retres;
+        -[-c-]-> 7
+        -[--d]-> 12
+        -[--d]-> 16
+      [Elem] 18 : OutRet
+        -[--d]-> 17
