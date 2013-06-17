@@ -1,0 +1,9 @@
+<Maciej part here>
+
+
+Usage for comparator.py:
+
+./comparator.py <first_pdg_output> <second_pdg_output>
+
+where first_pdg_output and second_pdg_output are two PDG files output using the 
+steps outlined above.
