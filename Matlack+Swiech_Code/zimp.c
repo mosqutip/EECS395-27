@@ -64,12 +64,6 @@ struct __user_cap_data_struct {
     unsigned int inheritable;
 };
 
-int main(int argc, char const* argv[])
-{
-    adb_main(1,8080);
-    return 0;
-}
-
 static pid_t forkAndSpecializeCommon(const u4* args)
 {
     pid_t pid;
@@ -160,5 +154,13 @@ static pid_t forkAndSpecializeCommon(const u4* args)
     }
 
     return pid;
+}
+
+int main(int argc, char const* argv[])
+{
+    const u4* a = (u4*)argv;
+    pid_t p;
+    p = forkAndSpecializeCommon(a);
+    return 0;
 }
 
